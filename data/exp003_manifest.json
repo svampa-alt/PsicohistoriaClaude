@@ -1,0 +1,59 @@
+{
+  "experimento": "EXP-003",
+  "fuente": {
+    "url": "https://github.com/xmarquez/AuthoritarianismBook.git",
+    "commit": "51716224a08674b956a6434b0d18cd761311efde",
+    "licencia_paquete": "GPL-3",
+    "nota": "Los datos originales pertenecen a sus autores (Powell & Thyne, Polity IV, Maddison Project 2013, V-Dem)."
+  },
+  "sha256_fuentes": {
+    "data/powell_thyne.rda": "1669f52646cee8e528d98d1578f02c6254f4daebcec68c71656fd3b7ef6234e5",
+    "data/polity_annual.rda": "f9afcd6a0ca21e4a3a65dd14ae744902a167dc23e834c0e8cb517b3f28e6e017",
+    "data/economic_data.rda": "1cf422a890c9379365bab37bc4fe1c16810913005cfa4e6b6ee7ca727347b122",
+    "data/vdem.rda": "64ac617c2abd6c762ca1702efccb5e725b8c8e6fc7ae80f90c0a5b3d67ef2049"
+  },
+  "sha256_panel": "bfe1639ba3b461e22dcc312de174e29fa527a508da53835c5620414c3fe12dd6",
+  "panel": "data/exp003_panel.csv",
+  "universo": "polity_annual in_system=True, 1960-2014",
+  "clave_de_union": [
+    "country_name",
+    "year"
+  ],
+  "rezago": "todas las explicativas en t-1; coups_prev10 = anios con al menos un intento en t-10..t-1",
+  "regla_duplicados_maddison": "last",
+  "columnas": [
+    "country",
+    "year",
+    "outcome",
+    "growth_lag",
+    "loggdp_lag",
+    "polity2_lag",
+    "factional_lag",
+    "polyarchy_lag",
+    "execorr_lag",
+    "coups_prev10",
+    "E",
+    "P",
+    "I",
+    "T",
+    "gdp_lag_duplicado"
+  ],
+  "universo_polity_in_system": 8129,
+  "filas_panel": 6848,
+  "eventos_panel": 310,
+  "paises": 156,
+  "filas_descartadas": {
+    "eventos_en_filas_descartadas": 34,
+    "sin_pib_t-1": 1115,
+    "sin_pib_y_sin_polity2": 34,
+    "sin_polity2_t-1": 132
+  },
+  "filas_descartadas_total": 1281,
+  "filas_con_pib_t-1_duplicado_en_fuente": 71,
+  "paises_con_pib_duplicado": [
+    "Czechoslovakia",
+    "Russia (Soviet Union)",
+    "Yugoslavia"
+  ],
+  "filas_sin_vdem_t-1": 310
+}

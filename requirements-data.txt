@@ -1,0 +1,3 @@
+# Solo para reconstruir el panel (src/exp003_build_panel.py).
+# El modelo, las pruebas y la demo usan únicamente la biblioteca estándar.
+pyreadr>=0.5

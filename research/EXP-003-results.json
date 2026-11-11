@@ -1,0 +1,477 @@
+{
+  "experimento": "EXP-003",
+  "pregunta": "El indice T de EXP-001 (pesos sin ajustar), medido en t-1, anticipa intentos de golpe en t mejor que baselines simples?",
+  "preespecificado": {
+    "corte": {
+      "entrenamiento": [
+        1960,
+        1989
+      ],
+      "prueba": [
+        1990,
+        2014
+      ]
+    },
+    "modelos": [
+      "B0",
+      "B1",
+      "MT",
+      "MH",
+      "MX"
+    ],
+    "ridge": 1.0,
+    "B1_strength": 5.0,
+    "bootstrap": {
+      "bloques": "anio",
+      "replicas": 1000,
+      "semilla": 20261111
+    },
+    "pesos_T": {
+      "E": 0.4,
+      "P": 0.35,
+      "I": 0.25
+    }
+  },
+  "exploratorio": [
+    "MT_expansivo",
+    "MX_expansivo"
+  ],
+  "panel": {
+    "filas": 6848,
+    "eventos": 310,
+    "paises": 156
+  },
+  "entrenamiento": {
+    "n": 3673,
+    "eventos": 236,
+    "tasa": 0.06425265450585353
+  },
+  "prueba": {
+    "n": 3175,
+    "eventos": 74,
+    "tasa": 0.023307086614173227
+  },
+  "modelos": {
+    "B0": {
+      "brier": 0.02370097694243153,
+      "skill_vs_B0": 0.0,
+      "auc": 0.6404451048920575,
+      "p_media": 0.055384085987037396,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.04729523599157218,
+          "tasa_observada": 0.012598425196850394,
+          "eventos": 8
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.0511979226734523,
+          "tasa_observada": 0.012598425196850394,
+          "eventos": 8
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.055442413625605445,
+          "tasa_observada": 0.02204724409448819,
+          "eventos": 14
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.05971467288662802,
+          "tasa_observada": 0.025196850393700787,
+          "eventos": 16
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.063270184757929,
+          "tasa_observada": 0.04409448818897638,
+          "eventos": 28
+        }
+      ],
+      "tipo": "preespecificado"
+    },
+    "B1": {
+      "brier": 0.024694926472910425,
+      "skill_vs_B0": -0.041937070058046366,
+      "auc": 0.7738284075755859,
+      "p_media": 0.05257561286506829,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.005221118945859848,
+          "tasa_observada": 0.0015748031496062992,
+          "eventos": 1
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.008572501658359202,
+          "tasa_observada": 0.0031496062992125984,
+          "eventos": 2
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.02792013884117225,
+          "tasa_observada": 0.012598425196850394,
+          "eventos": 8
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.06861267438983734,
+          "tasa_observada": 0.03779527559055118,
+          "eventos": 24
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.15255163049011275,
+          "tasa_observada": 0.06141732283464567,
+          "eventos": 39
+        }
+      ],
+      "tipo": "preespecificado",
+      "delta_brier_vs_B0": 0.0009939495304788944,
+      "delta_brier_ic95_bootstrap_anual": [
+        0.0002636618701192851,
+        0.0017791983832675636
+      ]
+    },
+    "MT": {
+      "brier": 0.02606542718199845,
+      "skill_vs_B0": -0.09976172059531763,
+      "auc": 0.7398136608068888,
+      "p_media": 0.07718638510520283,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.03841108550014546,
+          "tasa_observada": 0.0031496062992125984,
+          "eventos": 2
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.04583575326712586,
+          "tasa_observada": 0.006299212598425197,
+          "eventos": 4
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.05507069702820379,
+          "tasa_observada": 0.02047244094488189,
+          "eventos": 13
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.08659407880763942,
+          "tasa_observada": 0.031496062992125984,
+          "eventos": 20
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.16002031092289962,
+          "tasa_observada": 0.05511811023622047,
+          "eventos": 35
+        }
+      ],
+      "tipo": "preespecificado",
+      "delta_brier_vs_B0": 0.002364450239566919,
+      "delta_brier_ic95_bootstrap_anual": [
+        0.0014838679534441848,
+        0.0032493084676125843
+      ],
+      "variables": [
+        "T"
+      ],
+      "coeficientes_estandarizados": {
+        "intercepto": -2.7817798861115164,
+        "T": 0.46020152135550035
+      }
+    },
+    "MH": {
+      "brier": 0.023133970057175525,
+      "skill_vs_B0": 0.023923355000649793,
+      "auc": 0.6871584580388193,
+      "p_media": 0.049264698876009226,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.03886026933053919,
+          "tasa_observada": 0.02204724409448819,
+          "eventos": 14
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.03886026933053919,
+          "tasa_observada": 0.01732283464566929,
+          "eventos": 11
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.03886026933053919,
+          "tasa_observada": 0.006299212598425197,
+          "eventos": 4
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.03886026933053919,
+          "tasa_observada": 0.007874015748031496,
+          "eventos": 5
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.09088241705788937,
+          "tasa_observada": 0.06299212598425197,
+          "eventos": 40
+        }
+      ],
+      "tipo": "preespecificado",
+      "delta_brier_vs_B0": -0.0005670068852560058,
+      "delta_brier_ic95_bootstrap_anual": [
+        -0.000964034195408676,
+        -0.0001940662895497307
+      ],
+      "variables": [
+        "coups_prev10"
+      ],
+      "coeficientes_estandarizados": {
+        "intercepto": -2.8701180716073256,
+        "coups_prev10": 0.594648768266419
+      }
+    },
+    "MX": {
+      "brier": 0.024461529706874412,
+      "skill_vs_B0": -0.032089511174591134,
+      "auc": 0.8010929342757785,
+      "p_media": 0.05744732344500138,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.01111582251973737,
+          "tasa_observada": 0.0015748031496062992,
+          "eventos": 1
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.020505218470302757,
+          "tasa_observada": 0.004724409448818898,
+          "eventos": 3
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.03800652980547512,
+          "tasa_observada": 0.009448818897637795,
+          "eventos": 6
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.06506342195114358,
+          "tasa_observada": 0.03464566929133858,
+          "eventos": 22
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.15254562447834807,
+          "tasa_observada": 0.06614173228346457,
+          "eventos": 42
+        }
+      ],
+      "tipo": "preespecificado",
+      "delta_brier_vs_B0": 0.0007605527644428817,
+      "delta_brier_ic95_bootstrap_anual": [
+        -0.000375910407321701,
+        0.001943527742827209
+      ],
+      "variables": [
+        "E",
+        "P",
+        "I",
+        "loggdp_lag",
+        "coups_prev10",
+        "ExI",
+        "PxI"
+      ],
+      "coeficientes_estandarizados": {
+        "intercepto": -3.073386890218609,
+        "E": 0.15983958200821963,
+        "P": 0.4559824562571124,
+        "I": 0.4840162326123564,
+        "loggdp_lag": -0.3609653358851417,
+        "coups_prev10": 0.5038621772857762,
+        "ExI": -0.11624045092604746,
+        "PxI": -0.3770606502872166
+      }
+    },
+    "MT_expansivo": {
+      "brier": 0.02408310542492128,
+      "skill_vs_B0": -0.01612290005673267,
+      "auc": 0.755893913907458,
+      "p_media": 0.06243815970981578,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.030961417359233526,
+          "tasa_observada": 0.0031496062992125984,
+          "eventos": 2
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.038351390036703494,
+          "tasa_observada": 0.006299212598425197,
+          "eventos": 4
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.04738429703678182,
+          "tasa_observada": 0.01732283464566929,
+          "eventos": 11
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.07094263724515812,
+          "tasa_observada": 0.031496062992125984,
+          "eventos": 20
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.12455105687120195,
+          "tasa_observada": 0.05826771653543307,
+          "eventos": 37
+        }
+      ],
+      "tipo": "exploratorio",
+      "delta_brier_vs_B0": 0.0003821284824897485,
+      "delta_brier_ic95_bootstrap_anual": [
+        -0.00016990743735423146,
+        0.0010322248756643316
+      ]
+    },
+    "MX_expansivo": {
+      "brier": 0.023390543478757103,
+      "skill_vs_B0": 0.013097918470975078,
+      "auc": 0.8147894750603554,
+      "p_media": 0.048674431753901765,
+      "calibracion_quintiles": [
+        {
+          "quintil": 1,
+          "n": 635,
+          "p_media": 0.009141760127947365,
+          "tasa_observada": 0.0,
+          "eventos": 0
+        },
+        {
+          "quintil": 2,
+          "n": 635,
+          "p_media": 0.016728526507464134,
+          "tasa_observada": 0.004724409448818898,
+          "eventos": 3
+        },
+        {
+          "quintil": 3,
+          "n": 635,
+          "p_media": 0.030776737777531562,
+          "tasa_observada": 0.009448818897637795,
+          "eventos": 6
+        },
+        {
+          "quintil": 4,
+          "n": 635,
+          "p_media": 0.05272668404797234,
+          "tasa_observada": 0.031496062992125984,
+          "eventos": 20
+        },
+        {
+          "quintil": 5,
+          "n": 635,
+          "p_media": 0.13399845030859342,
+          "tasa_observada": 0.07086614173228346,
+          "eventos": 45
+        }
+      ],
+      "tipo": "exploratorio",
+      "delta_brier_vs_B0": -0.00031043346367442756,
+      "delta_brier_ic95_bootstrap_anual": [
+        -0.0012501638702216314,
+        0.0007043220915543388
+      ]
+    }
+  },
+  "sensibilidad_exploratoria_sin_pib_duplicado": {
+    "filas_excluidas": 71,
+    "n_prueba": 3135,
+    "eventos_prueba": 73,
+    "modelos": {
+      "B0": {
+        "brier": 0.023707609229781254,
+        "skill_vs_B0": 0.0,
+        "auc": 0.6381069763696393,
+        "delta_brier_ic95_bootstrap_anual": null
+      },
+      "B1": {
+        "brier": 0.024694696202485145,
+        "skill_vs_B0": -0.04163587155232529,
+        "auc": 0.7773860758927373,
+        "delta_brier_ic95_bootstrap_anual": [
+          0.00024859395514165085,
+          0.0018075209480259426
+        ]
+      },
+      "MT": {
+        "brier": 0.02603105721921722,
+        "skill_vs_B0": -0.09800431443408786,
+        "auc": 0.7414215795925306,
+        "delta_brier_ic95_bootstrap_anual": [
+          0.0015014564205600113,
+          0.003164063180297134
+        ]
+      },
+      "MH": {
+        "brier": 0.023123652743524643,
+        "skill_vs_B0": 0.024631605852649674,
+        "auc": 0.6911075221674436,
+        "delta_brier_ic95_bootstrap_anual": [
+          -0.0009866122456201627,
+          -0.00019707402999853107
+        ]
+      },
+      "MX": {
+        "brier": 0.024444817967744656,
+        "skill_vs_B0": -0.03109587014102333,
+        "auc": 0.8021617172051574,
+        "delta_brier_ic95_bootstrap_anual": [
+          -0.0003961122250093803,
+          0.0019239570376464034
+        ]
+      }
+    }
+  },
+  "advertencia": "Asociacion predictiva, no causal. MT_expansivo y MX_expansivo son exploratorios."
+}

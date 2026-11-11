@@ -1,6 +1,41 @@
 # Psicohistoria Lab
 
+> **In English.** An open, recreational lab that tests whether simple mathematical models can anticipate real historical events better than naive baselines — inspired by the fictional psychohistory of Asimov's *Foundation*. Latest result (EXP-003): a hand-weighted "collective tension" index ranks coup risk well out of sample (AUC 0.74; 0.80 with extra variables) but is badly calibrated after 1990, so it does **not** beat the historical base rate on Brier score. Only a "recent coups" count does, slightly. Negative results are published as they are. **[Live demo: El Radiante](https://svampa-alt.github.io/PsicohistoriaClaude/)** · [How to contribute](CONTRIBUTING.md)
+
 **Un laboratorio abierto de exploración matemática de la historia y del comportamiento colectivo, inspirado en la psicohistoria ficticia de la saga *Fundación* de Isaac Asimov.**
+
+## Último hallazgo
+
+**EXP-003 (2026-11-11): el índice T ordena bien el riesgo de golpe de Estado, pero no le gana a la tasa histórica.** Con los pesos de EXP-001 sin ajustar, entrenando con 1960–1989 y pronosticando desde 1990 (3.175 países-año, 74 con intento de golpe):
+
+| Modelo | Brier | vs B0 | AUC |
+|---|---|---|---|
+| B0 · tasa histórica | 0,02370 | — | 0,640 |
+| MH · golpes en los 10 años previos | **0,02313** | **+2,4 %** (IC excluye 0) | 0,687 |
+| MT · logística sobre T | 0,02607 | −10,0 % | 0,740 |
+| MX · E, P, I, PIB, historia e interacciones | 0,02446 | −3,2 % | **0,801** |
+
+T discrimina (AUC 0,74) pero sobreestima: los golpes cayeron de 6,4 % a 2,3 % de los países por año después de 1990. Es un **resultado negativo en calibración** y no valida la psicohistoria. Salvedades importantes: el PIB termina en 2010 (prueba efectiva 1990–2011) y el evento «URSS 1991» es el intento de golpe, no la disolución.
+
+→ [Demo interactiva «El Radiante»](https://svampa-alt.github.io/PsicohistoriaClaude/) · [Informe completo](research/EXP-003-golpes-indice-T.md) · [Resultados JSON](research/EXP-003-results.json)
+
+## Empezar en 2 minutos
+
+```bash
+git clone https://github.com/svampa-alt/PsicohistoriaClaude.git
+cd PsicohistoriaClaude
+python -m unittest discover -s tests     # solo biblioteca estándar, Python 3.9+
+python src/exp003_model.py               # reproduce la tabla y regenera docs/index.html
+```
+
+El panel ya está en `data/exp003_panel.csv`. Para reconstruirlo desde las fuentes (requiere `pyreadr`), ver [el informe](research/EXP-003-golpes-indice-T.md#9-cómo-reproducirlo).
+
+## Cómo participar
+
+- Leé las [reglas de juego](CONTRIBUTING.md): sin fuga de información futura, preespecificado separado de exploratorio, sin datos inventados.
+- Elegí una tarea de [research/ISSUES-SUGERIDOS.md](research/ISSUES-SUGERIDOS.md) o de los issues con etiqueta `good first issue`.
+- Proponé una [fuente de datos](.github/ISSUE_TEMPLATE/nueva-fuente.md) o un [modelo](.github/ISSUE_TEMPLATE/nuevo-modelo.md) con las plantillas de issue.
+- Las metas y el estado verificado están en [HOJA-DE-RUTA.md](HOJA-DE-RUTA.md).
 
 ## Objetivo
 
@@ -73,3 +108,5 @@ Los avances futuros deben conservar un historial auditable y evitar duplicar exp
 - EXP-002-H (2026-11-10): [primer contraste histórico real con COW](research/EXP-002-H-primer-contraste-historico.md): 8.485 Estado-años de prueba (1950–2007), 133 eventos; Brier B0=0,0155789940, B1=0,0155668684. La diferencia es ínfima y su intervalo descriptivo incluye cero; **no se demostró ventaja predictiva robusta**. Los reingresos y episodios secundarios siguen pendientes de auditoría. Se corrigieron los encabezados reales del adaptador.
 
 - EXP-002-I (2026-11-11): [sensibilidad a StartYear2](research/EXP-002-I-sensibilidad-segundos-episodios.md), con [código reproducible](src/cow_second_onset_sensitivity.py) y [resultados JSON](research/EXP-002-I-results.json). Los 19 segundos episodios válidos agregan 5 Estado-años positivos, todos antes de 1950. Test 1950–2007: 8.485 observaciones, 133 eventos; Brier B0=0,0155926964 y B1=0,0155782024 con ambos episodios. **No hay ventaja predictiva robusta demostrada ni validación de EXP-001**. Datos COW originales no incorporados al repositorio.
+
+- EXP-003 (2026-11-11): [índice T frente a golpes de Estado](research/EXP-003-golpes-indice-T.md) — **ejecutado sobre datos reales** (Powell & Thyne, Polity IV, Maddison 2013, V-Dem; 6.848 países-año, 310 eventos). Corte preespecificado 1960–1989 / 1990–2014 (efectivo hasta 2011). Brier B0=0,02370, MH=0,02313, MT=0,02607, MX=0,02446; AUC MT=0,740, MX=0,801. **T discrimina pero no mejora el Brier de B0; solo MH tiene IC que excluye cero.** Variantes expansivas marcadas como exploratorias. [Código](src/exp003_model.py), [panel](data/exp003_panel.csv), [manifiesto con hashes](data/exp003_manifest.json), [pruebas](tests/test_exp003.py), [demo](https://svampa-alt.github.io/PsicohistoriaClaude/). Sin validación causal ni de EXP-001.

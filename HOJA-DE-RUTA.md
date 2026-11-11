@@ -1,6 +1,6 @@
 # Hoja de ruta permanente — Psicohistoria-lab
 
-Versión 1.0 · aprobada por el usuario el 2026-11-11. **Norma obligatoria para toda ejecución del laboratorio.** No reemplazarla silenciosamente; cualquier cambio de metas exige aprobación expresa. Consultar este documento al inicio y al cierre de cada ejecución.
+Versión 1.1 · aprobada por el usuario el 2026-11-11 (v1.0 del mismo día; la v1.1 solo cambia el formato de reporte y agrega el estado verificado). **Norma obligatoria para toda ejecución del laboratorio.** No reemplazarla silenciosamente; cualquier cambio de metas exige aprobación expresa. Consultar este documento al inicio y al cierre de cada ejecución.
 
 ## Objetivo científico
 Evaluar si modelos matemáticos multivariables, con interacciones económicas, políticas, demográficas, militares e institucionales, pueden anticipar acontecimientos históricos reales mejor que baselines simples. Solo información disponible antes del acontecimiento. Registrar también fallos y resultados negativos. No confundir reconstrucción retrospectiva con pronóstico ex ante.
@@ -36,14 +36,41 @@ Evaluar si modelos matemáticos multivariables, con interacciones económicas, p
 5. Separar **hecho verificado / ejecutado / implementado pero no ejecutado / pendiente / bloqueado**. No atribuir resultados inexistentes.
 6. Evitar duplicar repositorios, análisis o herramientas. Reutilizar código existente.
 7. No filtrar información futura, no inventar datos ni confundir una correlación con causalidad.
-8. **Toda ejecución debe terminar con un reporte de cumplimiento de ESTA hoja**, no un informe genérico de actividad. Guardar evidencias en GitHub cuando se modifique el proyecto.
+8. **Toda ejecución debe terminar con un reporte de cumplimiento de ESTA hoja** (breve por defecto, completo semanal o a pedido), no un informe genérico de actividad. Guardar evidencias en GitHub cuando se modifique el proyecto.
 
-## Formato obligatorio del reporte de cada ejecución
+## Formato del reporte (v1.1)
+
+### Reporte breve — formato por defecto de cada ejecución
+Máximo **10 líneas**:
+- Fecha, qué se ejecutó y commits; si se verificó GitHub.
+- **Una sola línea con los 7 indicadores** de corto plazo: bases investigadas (x/5) · fuentes incorporadas (x/3) · variables nuevas (x/≥6) · matriz (x/1) · experimento real (x/1) · comparación con baselines (x/1) · documentación (x %).
+- Resultado concreto principal (métricas reales) y qué es exploratorio.
+- Pendientes, desvíos o bloqueos, y plazos incumplidos si los hay. Si no hubo avances, escribir **0** y por qué.
+
+### Reporte completo — semanal o a pedido del usuario
 - **Fecha, ejecución, commits y archivos examinados**; indicar si se verificó GitHub.
 - Tabla **Compromiso de la hoja de ruta | Meta y vencimiento | Cumplido hoy (evidencia concreta) | Acumulado verificado | Falta/bloqueo | Estado**.
-- Incluir siempre los 7 indicadores de corto plazo: bases investigadas (objetivo 5), fuentes incorporadas (3), variables nuevas (≥6), matriz (1), experimento real (1), comparación con baselines (1), documentación (100%). Añadir hitos de mediano/largo plazo según corresponda.
-- **Resultados concretos:** fuentes con URL, cantidad de filas/variables, nombres de eventos, métricas y artefactos/commits. Si no hubo avances, escribir explícitamente **0** y explicar por qué.
+- Los 7 indicadores de corto plazo y los hitos de mediano/largo plazo que correspondan.
+- **Resultados concretos:** fuentes con URL, cantidad de filas/variables, nombres de eventos, métricas y artefactos/commits.
 - **Pendientes y desvíos:** qué obligación falta, cuánto falta, por qué y si se incumplió un plazo.
 - **Conclusión:** grado de cumplimiento; no confundir actividad con avance científico.
 
+Ambos formatos obedecen las mismas reglas: nada se declara cumplido sin evidencia; «implementado, no ejecutado» y «no verificado» se dicen expresamente.
+
 El estado no se autodeclara como cumplido sin evidencia verificable. Las metas no son garantías de factibilidad; los bloqueos se registran y no se ocultan.
+
+## Estado verificado tras EXP-003 (2026-11-11)
+
+Evidencia: [research/EXP-003-golpes-indice-T.md](research/EXP-003-golpes-indice-T.md), [data/exp003_manifest.json](data/exp003_manifest.json), [research/EXP-003-results.json](research/EXP-003-results.json).
+
+| Indicador (día 7) | Meta | Acumulado | Estado y salvedad |
+|---|---|---|---|
+| Bases investigadas | 5 | 5 | COW (EXP-002), Powell & Thyne, Polity IV, Maddison 2013, V-Dem. Las cuatro nuevas se leyeron de **una** fuente secundaria (AuthoritarianismBook); licencias originales **no verificadas** en origen. |
+| Fuentes incorporadas | 3 | 4 | Leídas, con hash SHA-256 y commit fijado. |
+| Variables explicativas nuevas | ≥6 | 7 | growth, loggdp, polity2, factional, polyarchy, execorr, coups_prev10. polyarchy y execorr están en el panel pero **no se usaron** en modelos. |
+| Matriz país-año multivariable | 1 | 1 | 6.848 filas, 156 países, 1960–2011 efectivos. Cambios territoriales documentados solo parcialmente (duplicados URSS/Yugoslavia/Checoslovaquia). |
+| Experimento histórico real | 1 | 1 (parcial) | Familia de eventos: 74 años-país con intento de golpe en la prueba. **La disolución de la URSS no fue evaluada**: el evento de 1991 en los datos es el intento de golpe de agosto. |
+| Comparación con baselines | 1 | 1 | B0, B1, MH frente a MT y MX, con IC por bloques anuales. |
+| Documentación | 100 % | 100 % de EXP-003 | Incluye resultado negativo: T no mejora el Brier de B0. |
+
+Pendiente de corto plazo: experimento específico sobre disolución de Estados (URSS 1991) con controles, o registro formal del bloqueo; verificar licencias en las fuentes originales; comprobar la ganancia fuera de muestra de las interacciones (EXP-003 no la aísla). Mediano plazo: 5 de 10–15 conjuntos de datos; 0 de ≥30 episodios históricos codificados individualmente.

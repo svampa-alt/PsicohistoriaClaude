@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Radiante · Psicohistoria Lab</title>
+<meta name="description" content="EXP-003: ¿un índice de tensión colectiva anticipa golpes de Estado? Pronósticos 1990–2014 evaluados fuera de muestra. Proyecto recreativo.">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{
+  --bg:#f3efe6; --panel:#fbf9f3; --ink:#1d1a16; --soft:#6b6459; --rule:#d9d2c3;
+  --mx:#b4530a; --mt:#0f6f6a; --b0:#8a8478; --coup:#c0261f; --coup-bg:#f6dcd6;
+  --track:#e6dfd0; --glow:rgba(180,83,10,.10);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1016; --panel:#141923; --ink:#ece6d8; --soft:#9a978f; --rule:#2a3140;
+  --mx:#f0a13c; --mt:#4fc7bd; --b0:#7d8493; --coup:#ff6b5e; --coup-bg:#3a1a1a;
+  --track:#1f2633; --glow:rgba(240,161,60,.13);
+}}
+:root[data-theme="dark"]{
+  --bg:#0d1016; --panel:#141923; --ink:#ece6d8; --soft:#9a978f; --rule:#2a3140;
+  --mx:#f0a13c; --mt:#4fc7bd; --b0:#7d8493; --coup:#ff6b5e; --coup-bg:#3a1a1a;
+  --track:#1f2633; --glow:rgba(240,161,60,.13);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);
+  background-image:radial-gradient(60rem 30rem at 50% -12rem,var(--glow),transparent 70%);background-repeat:no-repeat}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px 48px}
+a{color:inherit;text-decoration-color:var(--mx);text-underline-offset:3px}
+a:hover{color:var(--mx)}
+:focus-visible{outline:2px solid var(--mx);outline-offset:2px;border-radius:3px}
+
+header{padding:28px 0 8px;position:relative}
+.kicker{font:600 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+h1{font:400 clamp(44px,13vw,92px)/.95 var(--serif);letter-spacing:-.02em;margin:10px 0 12px}
+h1 em{font-style:italic;color:var(--mx)}
+.lede{max-width:44rem;font:400 18px/1.5 var(--serif);margin:0;color:var(--ink)}
+.lede b{font-weight:600}
+#theme{position:absolute;right:0;top:22px;background:none;border:1px solid var(--rule);color:var(--soft);
+  font:600 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:9px 11px;border-radius:999px;cursor:pointer}
+#theme:hover{color:var(--ink);border-color:var(--soft)}
+
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 0}
+.facts div{background:var(--panel);padding:12px 14px}
+.facts b{display:block;font:500 26px/1.1 var(--serif);font-variant-numeric:tabular-nums}
+.facts span{font-size:12.5px;color:var(--soft)}
+@media(min-width:700px){.facts{grid-template-columns:repeat(4,1fr)}}
+
+section{margin-top:44px}
+h2{font:400 28px/1.15 var(--serif);margin:0 0 4px;display:flex;align-items:baseline;gap:12px}
+h2 i{font:600 11px/1 var(--mono);font-style:normal;letter-spacing:.14em;color:var(--mx)}
+.sub{color:var(--soft);font-size:14.5px;margin:0 0 16px;max-width:46rem}
+
+.dial{display:flex;align-items:center;gap:16px;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:10px 0 14px}
+.year{font:400 clamp(54px,17vw,84px)/1 var(--serif);font-variant-numeric:tabular-nums;min-width:3.9ch}
+.dial .ctl{flex:1;min-width:0}
+.dial label{font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:36px;background:none;margin:2px 0 0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--track);border-radius:2px}
+input[type=range]::-moz-range-track{height:4px;background:var(--track);border-radius:2px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--mx);border:4px solid var(--bg);margin-top:-11px;box-shadow:0 0 0 1px var(--mx)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--mx);border:4px solid var(--bg);box-shadow:0 0 0 1px var(--mx)}
+.ends{display:flex;justify-content:space-between;font:12px var(--mono);color:var(--soft)}
+.tally{font-size:14px;color:var(--soft);margin:10px 0 4px}
+.tally b{color:var(--ink)}
+
+ol.top{list-style:none;margin:8px 0 0;padding:0}
+ol.top li{display:grid;grid-template-columns:2.2ch 1fr auto;gap:4px 10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--rule)}
+ol.top .n{font:13px var(--mono);color:var(--soft);text-align:right}
+ol.top button{all:unset;cursor:pointer;font-size:15.5px;line-height:1.25;overflow-wrap:anywhere}
+ol.top button:hover{text-decoration:underline;text-decoration-color:var(--mx)}
+ol.top .p{font:14px var(--mono);font-variant-numeric:tabular-nums}
+ol.top .bar{grid-column:2/4;height:5px;background:var(--track);border-radius:3px;overflow:hidden}
+ol.top .bar s{display:block;height:100%;background:var(--mx);border-radius:3px;transition:width .25s}
+ol.top li.hit button{color:var(--coup);font-weight:600}
+ol.top li.hit .bar s{background:var(--coup)}
+.tag{display:inline-block;font:600 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--coup);
+  background:var(--coup-bg);padding:4px 6px;border-radius:3px;margin-left:8px;vertical-align:2px}
+.missed{margin-top:18px;border-left:3px solid var(--coup);padding:2px 0 2px 14px}
+.missed h3{font:600 11px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--coup);margin:0 0 6px}
+.missed ul{list-style:none;margin:0;padding:0}
+.missed li{padding:3px 0;font-size:15px}
+.missed li span{font:13px var(--mono);color:var(--soft)}
+.missed p{margin:0;color:var(--soft);font-size:14.5px}
+.missed.none{border-left-color:var(--rule)}
+.missed.none h3{color:var(--soft)}
+
+.pick{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-bottom:10px}
+select{font:16px var(--sans);color:var(--ink);background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;max-width:100%;min-width:min(100%,280px)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--soft)}
+.legend span::before{content:"";display:inline-block;width:18px;height:0;border-top:3px solid;margin-right:6px;vertical-align:4px}
+.legend .mx::before{border-color:var(--mx)}
+.legend .mt::before{border-color:var(--mt)}
+.legend .b0::before{border-color:var(--b0);border-top-style:dashed;border-top-width:2px}
+.legend .cp::before{width:9px;height:9px;border:0;border-radius:50%;background:var(--coup);vertical-align:0}
+.chart{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:8px 4px 2px}
+svg{display:block;width:100%;height:auto;touch-action:pan-y}
+svg text{font:11px var(--mono);fill:var(--soft)}
+.grid{stroke:var(--rule);stroke-width:1}
+.cursor{stroke:var(--soft);stroke-width:1;stroke-dasharray:2 3}
+.l-mx{fill:none;stroke:var(--mx);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.l-mt{fill:none;stroke:var(--mt);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.l-b0{fill:none;stroke:var(--b0);stroke-width:1.5;stroke-dasharray:5 4}
+.dot{fill:var(--coup);stroke:var(--panel);stroke-width:2}
+.read{font:13.5px/1.5 var(--mono);margin:10px 2px 0;min-height:3em;font-variant-numeric:tabular-nums}
+.read b{font-weight:600}
+.read .c{color:var(--coup);font-weight:600}
+.hist{font-size:14px;color:var(--soft);margin:6px 2px 0}
+
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums;white-space:nowrap}
+th{font:600 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+th:first-child,td:first-child{text-align:left;white-space:normal}
+td:first-child b{font:600 14px var(--mono)}
+td small{display:block;color:var(--soft);font-size:12.5px}
+tr:last-child td{border-bottom:0}
+tr.exp td{color:var(--soft);font-style:italic}
+tr.best td:nth-child(2){color:var(--mt);font-weight:700}
+.good{color:var(--mt)}.bad{color:var(--coup)}
+.note{font-size:14px;color:var(--soft);margin:12px 0 0;max-width:48rem}
+.note b{color:var(--ink)}
+
+.finding{border:1px solid var(--rule);background:var(--panel);padding:18px;border-radius:4px;font:17px/1.55 var(--serif)}
+.finding p{margin:0 0 10px}.finding p:last-child{margin:0}
+
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--ink);font-size:13.5px;color:var(--soft)}
+footer p{margin:0 0 10px;max-width:52rem}
+footer .warn{color:var(--ink);font:italic 16px/1.5 var(--serif)}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px;font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <button id="theme" type="button" aria-label="Cambiar entre modo claro y oscuro">Modo</button>
+  <div class="kicker">Psicohistoria Lab · EXP-003</div>
+  <h1>El <em>Radiante</em></h1>
+  <p class="lede">¿Un índice de «tensión colectiva» escrito antes de mirar los datos puede anticipar <b>golpes de Estado</b>? Lo ajustamos con 1960–1989 y lo dejamos pronosticar desde 1990 sin volver a tocarlo. Esto es lo que vio, y lo que no.</p>
+  <div class="facts" id="facts"></div>
+</header>
+
+<section aria-labelledby="h-year">
+  <h2 id="h-year"><i>01</i>El mundo en un año</h2>
+  <p class="sub">Los diez países con mayor riesgo según el modelo MX, calculado solo con datos del año anterior. En rojo, los que efectivamente tuvieron al menos un intento de golpe ese año. Tocá un país para ver su serie.</p>
+  <div class="dial">
+    <output class="year" id="yearOut" for="year">1991</output>
+    <div class="ctl">
+      <label for="year">Año del pronóstico</label>
+      <input type="range" id="year" min="1990" max="2014" step="1" value="1991">
+      <div class="ends"><span>1990</span><span>2014</span></div>
+    </div>
+  </div>
+  <p class="tally" id="tally"></p>
+  <ol class="top" id="top"></ol>
+  <div class="missed" id="missed"></div>
+</section>
+
+<section aria-labelledby="h-country">
+  <h2 id="h-country"><i>02</i>Un país en el tiempo</h2>
+  <p class="sub">Probabilidad anual de intento de golpe según cada modelo. Los puntos rojos marcan los años en que ocurrió uno. Los nombres de país son los de la fuente original.</p>
+  <div class="pick">
+    <select id="country" aria-label="País"></select>
+    <div class="legend"><span class="mx">MX · multivariable</span><span class="mt">MT · solo índice T</span><span class="b0">B0 · tasa histórica</span><span class="cp">año con golpe</span></div>
+  </div>
+  <div class="chart"><svg id="chart" viewBox="0 0 640 300" role="img" aria-label="Probabilidad anual por modelo"></svg></div>
+  <p class="read" id="read" aria-live="polite"></p>
+  <p class="hist" id="hist"></p>
+</section>
+
+<section aria-labelledby="h-score">
+  <h2 id="h-score"><i>03</i>El marcador</h2>
+  <p class="sub">Brier: error cuadrático medio de las probabilidades (menor es mejor). AUC: qué tan bien se ordenan los casos, de 0,5 (azar) a 1. Δ Brier: diferencia contra B0 con intervalo de 95 % por bootstrap de años completos.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Modelo</th><th>Brier</th><th>Mejora vs B0</th><th>AUC</th><th>IC 95 % Δ Brier</th></tr></thead>
+    <tbody id="score"></tbody>
+  </table></div>
+  <p class="note"><b>En cursiva, variantes exploratorias</b> (MT_expansivo y MX_expansivo): se reajustan cada año con todos los años anteriores. No estaban en el plan original, así que no cuentan como prueba; solo sugieren hipótesis. El resto fue preespecificado: corte, variables, regularización y semilla se fijaron antes de evaluar.</p>
+</section>
+
+<section aria-labelledby="h-find">
+  <h2 id="h-find"><i>04</i>Qué aprendimos</h2>
+  <div class="finding">
+    <p><b>El índice ordena bien, pero no sabe en qué época vive.</b> Los países que MT y MX señalan como riesgosos son, en efecto, donde más golpes hubo (AUC 0,74 y 0,80). Pero los golpes pasaron de afectar al 6,4 % de los países por año antes de 1990 al 2,3 % después, y un modelo entrenado en el pasado sobreestima todo.</p>
+    <p>Resultado: en error de probabilidad, el único modelo que le gana con claridad a «decir siempre la tasa histórica» es el más tonto de todos, MH, que solo cuenta golpes recientes. Es un resultado negativo para el índice T, y lo publicamos tal cual.</p>
+  </div>
+</section>
+
+<footer>
+  <p class="warn">Proyecto recreativo y educativo inspirado en la psicohistoria de <i>Fundación</i>. No es un pronóstico operativo ni un fundamento para decisiones reales: describe asociaciones estadísticas del pasado, no causas ni futuros.</p>
+  <p><b>Fuentes.</b> Golpes: Powell &amp; Thyne, <i>Global Instances of Coups</i>. Régimen: Polity IV (Marshall, Gurr &amp; Jaggers). PIB per cápita: Maddison Project 2013. Democracia y corrupción: V-Dem. Todas leídas del paquete <a href="https://github.com/xmarquez/AuthoritarianismBook">AuthoritarianismBook</a> de Xavier Márquez (GPL-3), commit <code>5171622</code>. El PIB termina en 2010, por lo que no hay pronósticos para 2012–2014; además tiene huecos y series duplicadas para Estados sucesores (URSS, Yugoslavia, Checoslovaquia).</p>
+  <nav>
+    <a href="https://github.com/svampa-alt/PsicohistoriaClaude">Repositorio</a>
+    <a href="https://github.com/svampa-alt/PsicohistoriaClaude/blob/main/research/EXP-003-golpes-indice-T.md">Informe EXP-003</a>
+    <a href="https://github.com/svampa-alt/PsicohistoriaClaude/blob/main/CONTRIBUTING.md">Cómo participar</a>
+  </nav>
+</footer>
+</div>
+
+<script>
+const D = /*__EXP003_JSON__*/null;
+(function(){
+  "use strict";
+  const $ = id => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const pct = p => (p * 100).toLocaleString("es-AR", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + " %";
+  const num = (x, d) => x.toLocaleString("es-AR", {minimumFractionDigits: d, maximumFractionDigits: d});
+
+  // tema
+  const root = document.documentElement;
+  let saved = null; try { saved = localStorage.getItem("radiante-tema"); } catch (e) {}
+  if (saved) root.dataset.theme = saved;
+  $("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("radiante-tema", root.dataset.theme); } catch (e) {}
+  });
+
+  if (!D) { $("top").appendChild(el("li", null, "Página sin datos: ejecutar python src/exp003_model.py")); return; }
+  const C = D.countries, names = Object.keys(C);
+  let country = names.includes("Argentina") ? "Argentina" : names[0];
+  let year = 1991;
+
+  // datos clave
+  [[num(D.n_prueba, 0), "pronósticos país-año (1990–2011 efectivos)"],
+   [String(D.eventos_prueba), "años-país con intento de golpe"],
+   [num(D.modelos.MX.auc, 2), "AUC del modelo MX (0,5 = azar)"],
+   [num(D.modelos.MX.skill * 100, 1) + " %", "mejora de MX sobre B0 en Brier"]
+  ].forEach(([b, s]) => { const d = el("div"); d.append(el("b", null, b), el("span", null, s)); $("facts").appendChild(d); });
+
+  // 01 · ranking anual
+  function ranking(y) {
+    const out = [];
+    for (const n of names) { const i = C[n].years.indexOf(y); if (i >= 0) out.push({n, p: C[n].MX[i], coup: C[n].coup[i]}); }
+    return out.sort((a, b) => b.p - a.p || a.n.localeCompare(b.n));
+  }
+  function drawYear() {
+    $("yearOut").textContent = year;
+    const r = ranking(year), top = r.slice(0, 10), max = top.length ? top[0].p : 1;
+    const coups = r.filter(x => x.coup), inTop = top.filter(x => x.coup).length;
+    const tally = $("tally"); tally.textContent = "";
+    tally.append(el("b", null, String(r.length)), " países evaluados · ", el("b", null, String(coups.length)),
+      coups.length === 1 ? " con intento de golpe · " : " con intento de golpe · ", el("b", null, String(inTop)), " dentro del top 10");
+    const ol = $("top"); ol.textContent = "";
+    top.forEach((x, i) => {
+      const li = el("li", x.coup ? "hit" : null);
+      const b = el("button", null, x.n); b.type = "button"; b.addEventListener("click", () => pick(x.n, true));
+      const name = el("div"); name.appendChild(b); if (x.coup) name.appendChild(el("span", "tag", "golpe"));
+      const bar = el("div", "bar"), s = el("s"); s.style.width = (x.p / max * 100).toFixed(1) + "%"; bar.appendChild(s);
+      li.append(el("span", "n", String(i + 1)), name, el("span", "p", pct(x.p)), bar);
+      ol.appendChild(li);
+    });
+    const box = $("missed"); box.textContent = "";
+    if (!r.length) {
+      tally.textContent = "Sin pronósticos para " + year + ".";
+      box.className = "missed none";
+      box.appendChild(el("h3", null, "Año sin datos"));
+      box.appendChild(el("p", null, "La serie de PIB (Maddison 2013) termina en 2010, así que el modelo no puede pronosticar después de 2011. La evaluación efectiva cubre 1990–2011. Actualizar las fuentes es el primer issue abierto del proyecto."));
+      return;
+    }
+    const out = r.map((x, i) => ({...x, rank: i + 1})).filter(x => x.coup && x.rank > 10);
+    box.className = "missed" + (out.length ? "" : " none");
+    if (out.length) {
+      box.appendChild(el("h3", null, "Golpes fuera del top 10"));
+      const ul = el("ul");
+      out.forEach(x => { const li = el("li"); const b = el("button", null, x.n); b.type = "button"; b.style.cssText = "all:unset;cursor:pointer;text-decoration:underline;text-decoration-color:var(--coup);text-underline-offset:3px";
+        b.addEventListener("click", () => pick(x.n, true));
+        li.append(b, " ", el("span", null, "puesto " + x.rank + " de " + r.length + " · " + pct(x.p))); ul.appendChild(li); });
+      box.appendChild(ul);
+    } else {
+      box.appendChild(el("h3", null, coups.length ? "Ningún golpe fuera del top 10" : "Año sin golpes en el panel"));
+      box.appendChild(el("p", null, coups.length ? "Todos los intentos de este año ocurrieron en países del top 10." : "No hubo intentos registrados entre los países evaluados: toda alarma de este año fue falsa."));
+    }
+  }
+
+  // 02 · serie por país
+  const NS = "http://www.w3.org/2000/svg";
+  const sv = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+  const W = 640, H = 300, L = 44, R = 14, T = 14, B = 30, Y0 = 1990, Y1 = 2014;
+  const X = y => L + (y - Y0) / (Y1 - Y0) * (W - L - R);
+  let Yf = p => p, cursor = null;
+  function drawChart() {
+    const c = C[country], svg = $("chart"); svg.textContent = "";
+    const top = Math.max(0.1, ...c.MX, ...c.MT, ...c.B0);
+    const step = top > 0.4 ? 0.2 : top > 0.2 ? 0.1 : 0.05, ymax = Math.ceil(top / step - 1e-9) * step;
+    Yf = p => T + (1 - p / ymax) * (H - T - B);
+    for (let v = 0; v <= ymax + 1e-9; v += step) {
+      svg.appendChild(sv("line", {class: "grid", x1: L, x2: W - R, y1: Yf(v), y2: Yf(v)}));
+      const t = sv("text", {x: L - 6, y: Yf(v) + 4, "text-anchor": "end"}); t.textContent = Math.round(v * 100) + " %"; svg.appendChild(t);
+    }
+    for (let y = Y0; y <= Y1; y += 4) { const t = sv("text", {x: X(y), y: H - 9, "text-anchor": "middle"}); t.textContent = y; svg.appendChild(t); }
+    cursor = sv("line", {class: "cursor", y1: T, y2: H - B}); svg.appendChild(cursor);
+    const path = key => { let d = ""; c.years.forEach((y, i) => { d += (i && c.years[i - 1] === y - 1 ? "L" : "M") + X(y).toFixed(1) + " " + Yf(c[key][i]).toFixed(1); }); return d; };
+    svg.appendChild(sv("path", {class: "l-b0", d: path("B0")}));
+    svg.appendChild(sv("path", {class: "l-mt", d: path("MT")}));
+    svg.appendChild(sv("path", {class: "l-mx", d: path("MX")}));
+    if (c.years.length === 1) ["MT", "MX"].forEach(k => svg.appendChild(sv("circle", {cx: X(c.years[0]), cy: Yf(c[k][0]), r: 3, fill: k === "MX" ? "var(--mx)" : "var(--mt)"})));
+    c.years.forEach((y, i) => { if (c.coup[i]) { const d = sv("circle", {class: "dot", cx: X(y), cy: Yf(c.MX[i]), r: 6}); const t = sv("title", {}); t.textContent = "Intento de golpe en " + y; d.appendChild(t); svg.appendChild(d); } });
+    const all = c.coup_years_panel || [];
+    $("hist").textContent = all.length ? "Años con intento de golpe en todo el panel (1960–2014): " + all.join(", ") + "." : "Sin intentos de golpe registrados en el panel (1960–2014).";
+    drawRead();
+  }
+  function drawRead() {
+    const c = C[country], i = c.years.indexOf(year), read = $("read"); read.textContent = "";
+    cursor.setAttribute("x1", X(year)); cursor.setAttribute("x2", X(year));
+    read.appendChild(el("b", null, country + " · " + year));
+    if (i < 0) { read.append(" — sin datos suficientes ese año (falta PIB o Polity en " + (year - 1) + ")."); return; }
+    read.append(" — MX " + pct(c.MX[i]) + " · MT " + pct(c.MT[i]) + " · B0 " + pct(c.B0[i]) + " · T " + num(c.T[i], 2) + " · ");
+    read.appendChild(c.coup[i] ? el("span", "c", "hubo intento de golpe") : document.createTextNode("sin golpe"));
+  }
+  function pick(n, scroll) {
+    country = n; $("country").value = n; drawChart();
+    if (scroll) $("h-country").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+  }
+  function setYear(y) { year = Math.max(Y0, Math.min(Y1, y)); $("year").value = year; drawYear(); drawRead(); }
+  names.forEach(n => { const o = el("option", null, n); o.value = n; $("country").appendChild(o); });
+  $("country").addEventListener("change", e => pick(e.target.value));
+  $("year").addEventListener("input", e => setYear(+e.target.value));
+  const scrub = e => { const b = $("chart").getBoundingClientRect(); setYear(Math.round(Y0 + ((e.clientX - b.left) / b.width * W - L) / (W - L - R) * (Y1 - Y0))); };
+  $("chart").addEventListener("pointermove", scrub); $("chart").addEventListener("pointerdown", scrub);
+
+  // 03 · marcador
+  const info = {B0: "tasa histórica global", B1: "tasa por país, contraída", MT: "logística sobre T", MH: "logística sobre golpes previos",
+    MX: "E, P, I, PIB, golpes previos, E×I, P×I", MT_expansivo: "MT reajustado cada año", MX_expansivo: "MX reajustado cada año"};
+  const pre = Object.entries(D.modelos).filter(([, m]) => m.tipo !== "exploratorio");
+  const best = pre.reduce((a, b) => b[1].brier < a[1].brier ? b : a)[0];
+  for (const [k, m] of Object.entries(D.modelos)) {
+    const tr = el("tr", m.tipo === "exploratorio" ? "exp" : k === best ? "best" : null);
+    const td = el("td"); td.append(el("b", null, k), el("small", null, info[k] || "")); tr.appendChild(td);
+    tr.appendChild(el("td", null, num(m.brier, 5)));
+    const s = el("td", k === "B0" ? null : m.skill > 0 ? "good" : "bad", k === "B0" ? "—" : (m.skill > 0 ? "+" : "−") + num(Math.abs(m.skill) * 100, 1) + " %"); tr.appendChild(s);
+    tr.appendChild(el("td", null, num(m.auc, 3)));
+    const ci = m.ic95, sig = ci && (ci[1] < 0 || ci[0] > 0);
+    const f = x => (x < 0 ? "−" : "+") + num(Math.abs(x), 5);
+    tr.appendChild(el("td", null, ci ? "[" + f(ci[0]) + "; " + f(ci[1]) + "]" + (sig ? (ci[1] < 0 ? " ✓" : " ✗") : "") : "—"));
+    $("score").appendChild(tr);
+  }
+
+  $("country").value = country; drawYear(); drawChart();
+})();
+</script>
+</body>
+</html>
