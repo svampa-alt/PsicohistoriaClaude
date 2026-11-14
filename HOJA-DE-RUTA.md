@@ -74,3 +74,7 @@ Evidencia: [research/EXP-003-golpes-indice-T.md](research/EXP-003-golpes-indice-
 | Documentación | 100 % | 100 % de EXP-003 | Incluye resultado negativo: T no mejora el Brier de B0. |
 
 Pendiente de corto plazo: experimento específico sobre disolución de Estados (URSS 1991) con controles, o registro formal del bloqueo; verificar licencias en las fuentes originales; comprobar la ganancia fuera de muestra de las interacciones (EXP-003 no la aísla). Mediano plazo: 5 de 10–15 conjuntos de datos; 0 de ≥30 episodios históricos codificados individualmente.
+
+### Actualización 2026-11-14 (EXP-004)
+
+Evidencia: [research/EXP-004-tendencia-temporal.md](research/EXP-004-tendencia-temporal.md). Los 7 indicadores no cambian (5/5 · 4/3 · 7/≥6 · 1/1 · 1/1 parcial · 1/1 · 100 %). Se agrega una segunda comparación con baselines: MX_c supera a B0 y a MH en Brier con IC que excluye cero, pero no a MH_c, y sobre una ventana de prueba ya conocida. Bloqueo registrado: la red de la sesión no permite descargar las fuentes actualizadas del issue #1 (www.uky.edu, dataverse.nl, www.rug.nl, api.worldbank.org, www.systemicpeace.org). Siguen pendientes la disolución de la URSS, la verificación de licencias en origen y el aporte aislado de las interacciones (issue #3).
