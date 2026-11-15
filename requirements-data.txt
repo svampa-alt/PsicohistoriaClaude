@@ -1,3 +1,8 @@
 # Solo para reconstruir el panel (src/exp003_build_panel.py).
 # El modelo, las pruebas y la demo usan únicamente la biblioteca estándar.
 pyreadr>=0.5
+# EXP-005: lectura de Maddison 2023 (xlsx) y Polity5 (xls), y códigos de país
+pandas>=2
+openpyxl>=3
+xlrd>=2
+countrycode>=0.6

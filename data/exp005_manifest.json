@@ -1,0 +1,193 @@
+{
+  "experimento": "EXP-005",
+  "preregistro": "research/EXP-005-preregistro.md",
+  "sha256_fuentes": {
+    "data/fuentes/powell_thyne_V2026.08.29.csv": "1e8f933b22f4b9a77d0ba5eb59bf0d8158adcaab27746adcf345195be87a9012",
+    "maddison2023/mpd2023_web.xlsx": "ecc5916ca12789b983fc4be437f8a354bbf4291323605324ac3e0aea4c57cbb6",
+    "polity5/p5v2018.xls": "f81248561cb4fd884b0a439c7c0af298bc7f81b993bcd42e006988cb6d37a71c"
+  },
+  "url_fuentes": {
+    "powell_thyne": "https://www.uky.edu/~clthyn2/coup_data/home.htm (aportado por el usuario)",
+    "maddison2023": "https://dataverse.nl/api/access/datafile/421302 (doi:10.34894/INZBF2)",
+    "polity5": "https://www.systemicpeace.org/inscr/p5v2018.xls"
+  },
+  "sha256_panel": "63f689f89d11a0e701647f5c5146dc7e20e660584fc3c107f001f878942b9f8d",
+  "universo": "Polity5, 1960-2019 (2019: paises presentes en Polity5 en 2018)",
+  "universo_filas": 8965,
+  "filas_panel": 8197,
+  "eventos_panel": 327,
+  "paises": 163,
+  "por_periodo": {
+    "1960-1989": {
+      "filas": 3649,
+      "eventos": 233
+    },
+    "1990-2011": {
+      "filas": 3303,
+      "eventos": 80
+    },
+    "2012-2019": {
+      "filas": 1245,
+      "eventos": 14
+    }
+  },
+  "filas_descartadas": {
+    "eventos_en_filas_descartadas": 26,
+    "sin_pib_t-1": 584,
+    "sin_pib_y_sin_polity2": 22,
+    "sin_polity2_t-1": 162
+  },
+  "intentos_pt_fuera_del_universo_polity": [
+    [
+      54,
+      1981
+    ],
+    [
+      55,
+      1979
+    ],
+    [
+      55,
+      1983
+    ],
+    [
+      403,
+      1995
+    ],
+    [
+      403,
+      2003
+    ],
+    [
+      591,
+      1977
+    ],
+    [
+      781,
+      2012
+    ]
+  ],
+  "codigos_polity_sin_pib": [
+    {
+      "ccode": 110,
+      "pais": "Guyana",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 115,
+      "pais": "Suriname",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 260,
+      "pais": "Germany West",
+      "motivo": "Alemania Occidental: Maddison DEU no corresponde al mismo territorio"
+    },
+    {
+      "ccode": 265,
+      "pais": "Germany East",
+      "motivo": "Alemania Oriental: sin serie propia"
+    },
+    {
+      "ccode": 347,
+      "pais": "Serbia and Montenegro",
+      "motivo": "Yugoslavia/Serbia y Montenegro 1991-2006: Maddison YUG es el agregado de toda la ex Yugoslavia"
+    },
+    {
+      "ccode": 347,
+      "pais": "Yugoslavia",
+      "motivo": "Yugoslavia/Serbia y Montenegro 1991-2006: Maddison YUG es el agregado de toda la ex Yugoslavia"
+    },
+    {
+      "ccode": 520,
+      "pais": "Somalia",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 525,
+      "pais": "South Sudan",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 531,
+      "pais": "Eritrea",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 678,
+      "pais": "Yemen North",
+      "motivo": "Yemen del Norte: Maddison YEM es el pais unificado"
+    },
+    {
+      "ccode": 680,
+      "pais": "Yemen South",
+      "motivo": "Yemen del Sur: sin serie propia"
+    },
+    {
+      "ccode": 760,
+      "pais": "Bhutan",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 769,
+      "pais": "Pakistan",
+      "motivo": "Pakistan con Bangladesh (hasta 1971): Maddison PAK es el territorio actual"
+    },
+    {
+      "ccode": 817,
+      "pais": "South Vietnam",
+      "motivo": "Vietnam del Sur: sin serie propia"
+    },
+    {
+      "ccode": 860,
+      "pais": "Timor Leste",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 910,
+      "pais": "Papua New Guinea",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 940,
+      "pais": "Solomon Islands",
+      "motivo": "sin serie en Maddison 2023"
+    },
+    {
+      "ccode": 950,
+      "pais": "Fiji",
+      "motivo": "sin serie en Maddison 2023"
+    }
+  ],
+  "equivalencias_manuales": {
+    "315": "CSK",
+    "345": "YUG",
+    "342": "SRB",
+    "348": "MNE",
+    "364": "SUN",
+    "529": "ETH",
+    "626": "SDN",
+    "818": "VNM"
+  },
+  "factional_polcomp": [
+    6,
+    7,
+    8
+  ],
+  "columnas": [
+    "country",
+    "ccode",
+    "year",
+    "outcome",
+    "growth_lag",
+    "loggdp_lag",
+    "polity2_lag",
+    "factional_lag",
+    "coups_prev10",
+    "E",
+    "P",
+    "I",
+    "T",
+    "gdp_lag_duplicado"
+  ]
+}
