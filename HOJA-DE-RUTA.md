@@ -82,3 +82,7 @@ Evidencia: [research/EXP-004-tendencia-temporal.md](research/EXP-004-tendencia-t
 ### Actualización 2026-11-15 (EXP-005, datos)
 
 Evidencia: [research/EXP-005-panel-actualizado.md](research/EXP-005-panel-actualizado.md) y [data/exp005_manifest.json](data/exp005_manifest.json). Se incorporaron tres fuentes **originales** con hash: Powell & Thyne V2026.08.29, Maddison 2023 y Polity5. Fuentes incorporadas acumuladas: 4 leídas desde intermediario (EXP-003) + 3 originales (EXP-005), 7 lecturas de 5 bases distintas. Matriz país-año ampliada a 1960–2019 (8197 filas). Sin variables explicativas nuevas (mismas definiciones, fuentes nuevas). Evaluación confirmatoria preregistrada, no ejecutada. Licencias de las fuentes nuevas: no verificadas en origen.
+
+### Actualización 2026-11-16 (EXP-005, confirmación)
+
+Evidencia: [research/EXP-005-confirmacion.md](research/EXP-005-confirmacion.md). Evaluación preregistrada sobre años nunca evaluados (2012–2019): MX_c supera a B0 y a MH en Brier con IC que excluye cero (C1 y C2), pero no a MH_c (C3). Primera comparación con baselines fuera de una ventana conocida. Potencia baja: 14 eventos, 8 bloques anuales. Indicadores de 7 días sin cambios. Siguen pendientes la disolución de la URSS, los episodios individuales, la verificación de licencias y el período 2020–2026.
