@@ -1,0 +1,82 @@
+{
+  "experimento": "EXP-006",
+  "preregistro": "research/EXP-006-preregistro.md",
+  "sha256_fuentes": {
+    "vdem16/vdem.RData": "39b412d39a061c18f20c98e4ad4d6355b05a0441df31be4ee9aec420dc3d95ea",
+    "worldbank/NY.GDP.PCAP.KD_2020_2024.json": "8fe3c93fcf883eddaae82d2614d2bc1f973aef3145eac42ac35967845006076f",
+    "powell_thyne": "1e8f933b22f4b9a77d0ba5eb59bf0d8158adcaab27746adcf345195be87a9012",
+    "maddison2023": "ecc5916ca12789b983fc4be437f8a354bbf4291323605324ac3e0aea4c57cbb6",
+    "polity5": "f81248561cb4fd884b0a439c7c0af298bc7f81b993bcd42e006988cb6d37a71c"
+  },
+  "url_fuentes": {
+    "vdem16": "https://raw.githubusercontent.com/vdeminstitute/vdemdata/master/data/vdem.RData (vdemdata 16.0, GPL-3)",
+    "worldbank": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.KD?format=json&date=2020:2024&per_page=20000"
+  },
+  "sha256_panel": "9ea028133d9d241e3c48b66743fa73d8cdd0cbda683c6a9954e317b21b0f89d5",
+  "universo": "Polity5 1960-2018; 2019-2025 con los paises presentes en Polity5 en 2018",
+  "filas_universo": 9967,
+  "filas_panel": 9248,
+  "eventos_panel": 345,
+  "paises": 163,
+  "por_periodo": {
+    "1960-1989": {
+      "filas": 3689,
+      "eventos": 236
+    },
+    "1990-2011": {
+      "filas": 3369,
+      "eventos": 78
+    },
+    "2012-2019": {
+      "filas": 1256,
+      "eventos": 14
+    },
+    "2020-2023": {
+      "filas": 628,
+      "eventos": 12
+    },
+    "2024-2025": {
+      "filas": 306,
+      "eventos": 5
+    }
+  },
+  "filas_descartadas": {
+    "eventos_en_filas_descartadas": 25,
+    "sin_pib_t-1": 674,
+    "sin_vdem_t-1": 45
+  },
+  "cuantiles_v2cacamps_entrenamiento": {
+    "q05": -2.351,
+    "q95": 2.2367999999999997
+  },
+  "pib_extendido_con_banco_mundial": 312,
+  "polity_a_cow": {
+    "364": 365,
+    "529": 530,
+    "626": 625,
+    "525": 626,
+    "769": 770,
+    "818": 816,
+    "342": 345,
+    "347": 345,
+    "348": 341
+  },
+  "columnas": [
+    "country",
+    "ccode",
+    "cow",
+    "year",
+    "outcome",
+    "growth_lag",
+    "loggdp_lag",
+    "gdp_fuente",
+    "cacamps_lag",
+    "polyarchy_lag",
+    "coups_prev10",
+    "E",
+    "P",
+    "I",
+    "T",
+    "gdp_lag_duplicado"
+  ]
+}

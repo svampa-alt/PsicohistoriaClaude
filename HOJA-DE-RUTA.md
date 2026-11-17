@@ -86,3 +86,7 @@ Evidencia: [research/EXP-005-panel-actualizado.md](research/EXP-005-panel-actual
 ### Actualización 2026-11-16 (EXP-005, confirmación)
 
 Evidencia: [research/EXP-005-confirmacion.md](research/EXP-005-confirmacion.md). Evaluación preregistrada sobre años nunca evaluados (2012–2019): MX_c supera a B0 y a MH en Brier con IC que excluye cero (C1 y C2), pero no a MH_c (C3). Primera comparación con baselines fuera de una ventana conocida. Potencia baja: 14 eventos, 8 bloques anuales. Indicadores de 7 días sin cambios. Siguen pendientes la disolución de la URSS, los episodios individuales, la verificación de licencias y el período 2020–2026.
+
+### Actualización 2026-11-17 (EXP-006, datos)
+
+Evidencia: [research/EXP-006-panel-vdem.md](research/EXP-006-panel-vdem.md). Dos fuentes nuevas leídas de origen con hash: V-Dem v16 (paquete oficial) y Banco Mundial (API). Variables nuevas: polarización continua (v2cacamps) y poliarquía usadas en el modelo. Matriz ampliada a 1960–2025 (9248 filas). Evaluación sobre 2020–2025 preregistrada, no ejecutada. Licencias de los datos no verificadas en origen.
