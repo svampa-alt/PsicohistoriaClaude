@@ -90,3 +90,7 @@ Evidencia: [research/EXP-005-confirmacion.md](research/EXP-005-confirmacion.md).
 ### Actualización 2026-11-17 (EXP-006, datos)
 
 Evidencia: [research/EXP-006-panel-vdem.md](research/EXP-006-panel-vdem.md). Dos fuentes nuevas leídas de origen con hash: V-Dem v16 (paquete oficial) y Banco Mundial (API). Variables nuevas: polarización continua (v2cacamps) y poliarquía usadas en el modelo. Matriz ampliada a 1960–2025 (9248 filas). Evaluación sobre 2020–2025 preregistrada, no ejecutada. Licencias de los datos no verificadas en origen.
+
+### Actualización 2026-11-18 (EXP-006, resultados)
+
+Evidencia: [research/EXP-006-resultados.md](research/EXP-006-resultados.md). En 2020–2025, MX_c con V-Dem supera a B0 (D1) y a MH_c (D3, primera vez que el índice aporta más allá de la tasa base), pero no a MH (D2). Subestima la nueva ola de golpes. Se cumple la meta de mediano plazo de comprobar interacciones solo en parte: el aporte del conjunto E, P, I quedó demostrado en una ventana; el de E×I y P×I por separado sigue sin aislar (issue #3).
