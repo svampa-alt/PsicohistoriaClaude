@@ -94,3 +94,7 @@ Evidencia: [research/EXP-006-panel-vdem.md](research/EXP-006-panel-vdem.md). Dos
 ### Actualización 2026-11-18 (EXP-006, resultados)
 
 Evidencia: [research/EXP-006-resultados.md](research/EXP-006-resultados.md). En 2020–2025, MX_c con V-Dem supera a B0 (D1) y a MH_c (D3, primera vez que el índice aporta más allá de la tasa base), pero no a MH (D2). Subestima la nueva ola de golpes. Se cumple la meta de mediano plazo de comprobar interacciones solo en parte: el aporte del conjunto E, P, I quedó demostrado en una ventana; el de E×I y P×I por separado sigue sin aislar (issue #3).
+
+### Actualización 2026-11-19 (EXP-007, interacciones)
+
+Evidencia: [research/EXP-007-interacciones.md](research/EXP-007-interacciones.md). Se comprobó fuera de muestra la meta de mediano plazo «analizar interacciones y comprobar su ganancia»: en 1990–2025 las interacciones E×I y P×I **empeoran** el Brier (IC que excluye 0) y no mejoran el AUC. Hipótesis descartada y registrada. Nuevo mejor modelo: sin interacciones (MXs_c), elegido después de ver resultados, por lo que su ventaja es exploratoria hasta probarla en datos nuevos.
