@@ -98,3 +98,7 @@ Evidencia: [research/EXP-006-resultados.md](research/EXP-006-resultados.md). En 
 ### Actualización 2026-11-19 (EXP-007, interacciones)
 
 Evidencia: [research/EXP-007-interacciones.md](research/EXP-007-interacciones.md). Se comprobó fuera de muestra la meta de mediano plazo «analizar interacciones y comprobar su ganancia»: en 1990–2025 las interacciones E×I y P×I **empeoran** el Brier (IC que excluye 0) y no mejoran el AUC. Hipótesis descartada y registrada. Nuevo mejor modelo: sin interacciones (MXs_c), elegido después de ver resultados, por lo que su ventaja es exploratoria hasta probarla en datos nuevos.
+
+### Actualización 2026-11-20 (EXP-008, URSS 1991)
+
+Evidencia: [research/EXP-008-urss-1991.md](research/EXP-008-urss-1991.md). Se cumplió, con 2 días de atraso sobre el plazo de 7 días, el experimento histórico de la disolución de la URSS con controles (los demás Estados del mismo año) y variables anteriores al evento. Resultado: U1 cumplida (URSS en el percentil 79 de T), U2 y U3 no. El índice no discrimina disoluciones. Indicador «experimento histórico real» pasa de parcial a cumplido. Siguen pendientes los ≥30 episodios individuales de mediano plazo.

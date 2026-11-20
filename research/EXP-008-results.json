@@ -1,0 +1,143 @@
+{
+  "experimento": "EXP-008",
+  "preregistro": "research/EXP-008-preregistro.md",
+  "panel": "data/exp006_panel.csv",
+  "casos": [
+    {
+      "caso": "URSS",
+      "ccode": 364,
+      "anio_evento": 1991,
+      "datos_de": 1990,
+      "estados_en_el_anio": 147,
+      "T_valor": 0.5950350485,
+      "T_percentil": 0.7857142857142857,
+      "E_valor": 0.653052223,
+      "E_percentil": 0.6904761904761905,
+      "P_valor": 0.6194690265,
+      "P_percentil": 0.7108843537414966,
+      "I_valor": 0.468,
+      "I_percentil": 0.6156462585034014,
+      "T_puesto": 32,
+      "top5_T_del_anio": [
+        [
+          "Georgia",
+          0.906
+        ],
+        [
+          "Romania",
+          0.906
+        ],
+        [
+          "Dominican Republic",
+          0.816
+        ],
+        [
+          "Bulgaria",
+          0.801
+        ],
+        [
+          "Azerbaijan",
+          0.787
+        ]
+      ],
+      "riesgo_golpe_MXs_c": 0.02239646596646143,
+      "riesgo_golpe_percentil": 0.3979591836734694
+    },
+    {
+      "caso": "Yugoslavia",
+      "ccode": 345,
+      "anio_evento": 1991,
+      "datos_de": 1990,
+      "estados_en_el_anio": 147,
+      "T_valor": 0.7107366553,
+      "T_percentil": 0.9149659863945578,
+      "E_valor": 0.9485688278,
+      "E_percentil": 0.935374149659864,
+      "P_valor": 0.660883212,
+      "P_percentil": 0.7448979591836735,
+      "I_valor": 0.4,
+      "I_percentil": 0.47278911564625853,
+      "T_puesto": 13,
+      "top5_T_del_anio": [
+        [
+          "Georgia",
+          0.906
+        ],
+        [
+          "Romania",
+          0.906
+        ],
+        [
+          "Dominican Republic",
+          0.816
+        ],
+        [
+          "Bulgaria",
+          0.801
+        ],
+        [
+          "Azerbaijan",
+          0.787
+        ]
+      ],
+      "riesgo_golpe_MXs_c": 0.02748288977027117,
+      "riesgo_golpe_percentil": 0.47278911564625853
+    },
+    {
+      "caso": "Checoslovaquia",
+      "ccode": 315,
+      "anio_evento": 1992,
+      "datos_de": 1991,
+      "estados_en_el_anio": 150,
+      "T_valor": 0.4829888618,
+      "T_percentil": 0.48333333333333334,
+      "E_valor": 1.0,
+      "E_percentil": 0.9366666666666666,
+      "P_valor": 0.06996817647,
+      "P_percentil": 0.11,
+      "I_valor": 0.234,
+      "I_percentil": 0.16333333333333333,
+      "T_puesto": 78,
+      "top5_T_del_anio": [
+        [
+          "Georgia",
+          0.913
+        ],
+        [
+          "Romania",
+          0.894
+        ],
+        [
+          "Moldova",
+          0.872
+        ],
+        [
+          "Madagascar",
+          0.83
+        ],
+        [
+          "Iraq",
+          0.79
+        ]
+      ],
+      "riesgo_golpe_MXs_c": 0.010955258517027252,
+      "riesgo_golpe_percentil": 0.19666666666666666
+    }
+  ],
+  "hipotesis": {
+    "U1_URSS_percentil_T_ge_75": {
+      "percentil": 0.7857142857142857,
+      "cumplida": true
+    },
+    "U2_media_percentiles_ge_75": {
+      "media": 0.7280045351473924,
+      "cumplida": false
+    },
+    "U3_permutacion_p_lt_005": {
+      "p": 0.08943,
+      "sorteos": 100000,
+      "semilla": 20261120,
+      "cumplida": false
+    }
+  }
+}
