@@ -102,3 +102,7 @@ Evidencia: [research/EXP-007-interacciones.md](research/EXP-007-interacciones.md
 ### Actualización 2026-11-20 (EXP-008, URSS 1991)
 
 Evidencia: [research/EXP-008-urss-1991.md](research/EXP-008-urss-1991.md). Se cumplió, con 2 días de atraso sobre el plazo de 7 días, el experimento histórico de la disolución de la URSS con controles (los demás Estados del mismo año) y variables anteriores al evento. Resultado: U1 cumplida (URSS en el percentil 79 de T), U2 y U3 no. El índice no discrimina disoluciones. Indicador «experimento histórico real» pasa de parcial a cumplido. Siguen pendientes los ≥30 episodios individuales de mediano plazo.
+
+### Actualización 2026-11-21 (EXP-009, calibración)
+
+Evidencia: [research/EXP-009-recalibracion.md](research/EXP-009-recalibracion.md). La recalibración por errores recientes empata con la corrección anterior en 1990–2025 (K1 no cumplida) y reduce a la mitad el error de nivel en 2020–2025 (K3). Bloqueo registrado: no se pudo agregar UCDP (conflictos armados) porque `ucdp.uu.se`, `ucdpapi.pcr.uu.se` y `correlatesofwar.org` están bloqueados por la red de la sesión. Mediano plazo: 7 conjuntos de datos distintos de 10–15; 3 episodios históricos (disoluciones) de ≥30.
