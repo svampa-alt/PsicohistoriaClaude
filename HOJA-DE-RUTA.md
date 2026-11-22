@@ -106,3 +106,7 @@ Evidencia: [research/EXP-008-urss-1991.md](research/EXP-008-urss-1991.md). Se cu
 ### Actualización 2026-11-21 (EXP-009, calibración)
 
 Evidencia: [research/EXP-009-recalibracion.md](research/EXP-009-recalibracion.md). La recalibración por errores recientes empata con la corrección anterior en 1990–2025 (K1 no cumplida) y reduce a la mitad el error de nivel en 2020–2025 (K3). Bloqueo registrado: no se pudo agregar UCDP (conflictos armados) porque `ucdp.uu.se`, `ucdpapi.pcr.uu.se` y `correlatesofwar.org` están bloqueados por la red de la sesión. Mediano plazo: 7 conjuntos de datos distintos de 10–15; 3 episodios históricos (disoluciones) de ≥30.
+
+### Actualización 2026-11-22 (EXP-010, datos demográficos)
+
+Evidencia: [research/EXP-010-panel-demografia.md](research/EXP-010-panel-demografia.md). Dos variables demográficas nuevas del Banco Mundial (población y urbanización). Variables explicativas nuevas acumuladas: 11. Evaluación preregistrada, no ejecutada.
