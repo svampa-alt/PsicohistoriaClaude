@@ -110,3 +110,7 @@ Evidencia: [research/EXP-009-recalibracion.md](research/EXP-009-recalibracion.md
 ### Actualización 2026-11-22 (EXP-010, datos demográficos)
 
 Evidencia: [research/EXP-010-panel-demografia.md](research/EXP-010-panel-demografia.md). Dos variables demográficas nuevas del Banco Mundial (población y urbanización). Variables explicativas nuevas acumuladas: 11. Evaluación preregistrada, no ejecutada.
+
+### Actualización 2026-11-23 (EXP-010, resultados)
+
+Evidencia: [research/EXP-010-resultados.md](research/EXP-010-resultados.md). Las variables demográficas no mejoran el pronóstico: Brier igual (G1 no cumplida) y AUC menor (G2 refutada, IC que excluye 0). Hipótesis descartada y registrada. Segundo resultado negativo seguido al agregar variables: el próximo avance de datos debería buscar información distinta (conflictos, protestas, elecciones), no más variables macro.
