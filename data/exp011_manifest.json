@@ -1,0 +1,33 @@
+{
+  "experimento": "EXP-011",
+  "preregistro": "research/EXP-011-preregistro.md",
+  "base": "data/exp006_panel.csv",
+  "sha256_base": "9ea028133d9d241e3c48b66743fa73d8cdd0cbda683c6a9954e317b21b0f89d5",
+  "sha256_vdem": "39b412d39a061c18f20c98e4ad4d6355b05a0441df31be4ee9aec420dc3d95ea",
+  "sha256_panel": "a36685a6fa11ae6ec3e6bfe71e120b8bbbfe74dce94130407b49450c96d991bf",
+  "filas_panel": 9240,
+  "eventos_panel": 345,
+  "filas_descartadas": 8,
+  "eventos_descartados": 0,
+  "paises_con_filas_descartadas": [
+    "Afghanistan"
+  ],
+  "cuantiles_v2cagenmob_entrenamiento": {
+    "q05": -2.435,
+    "q95": 1.905
+  },
+  "por_periodo": {
+    "1960-1989": {
+      "filas": 3689,
+      "eventos": 236
+    },
+    "1990-2019": {
+      "filas": 4617,
+      "eventos": 92
+    },
+    "2020-2025": {
+      "filas": 934,
+      "eventos": 17
+    }
+  }
+}

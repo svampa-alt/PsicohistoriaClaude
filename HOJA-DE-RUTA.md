@@ -114,3 +114,7 @@ Evidencia: [research/EXP-010-panel-demografia.md](research/EXP-010-panel-demogra
 ### Actualización 2026-11-23 (EXP-010, resultados)
 
 Evidencia: [research/EXP-010-resultados.md](research/EXP-010-resultados.md). Las variables demográficas no mejoran el pronóstico: Brier igual (G1 no cumplida) y AUC menor (G2 refutada, IC que excluye 0). Hipótesis descartada y registrada. Segundo resultado negativo seguido al agregar variables: el próximo avance de datos debería buscar información distinta (conflictos, protestas, elecciones), no más variables macro.
+
+### Actualización 2026-11-24 (EXP-011, datos)
+
+Evidencia: [research/EXP-011-panel-militar-movilizacion.md](research/EXP-011-panel-militar-movilizacion.md). Dos variables nuevas de tipo distinto (poder militar en el ejecutivo y movilización masiva, V-Dem). Variables explicativas acumuladas: 13. Evaluación preregistrada, no ejecutada. Nota: el usuario incorporó el 2026-11-24 los paneles EXP-002-J/K desde Psicohistoria-lab (commit `554a74a`); sus pruebas pasan.
