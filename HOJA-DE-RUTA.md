@@ -118,3 +118,7 @@ Evidencia: [research/EXP-010-resultados.md](research/EXP-010-resultados.md). Las
 ### Actualización 2026-11-24 (EXP-011, datos)
 
 Evidencia: [research/EXP-011-panel-militar-movilizacion.md](research/EXP-011-panel-militar-movilizacion.md). Dos variables nuevas de tipo distinto (poder militar en el ejecutivo y movilización masiva, V-Dem). Variables explicativas acumuladas: 13. Evaluación preregistrada, no ejecutada. Nota: el usuario incorporó el 2026-11-24 los paneles EXP-002-J/K desde Psicohistoria-lab (commit `554a74a`); sus pruebas pasan.
+
+### Actualización 2026-11-25 (EXP-011, resultados)
+
+Evidencia: [research/EXP-011-resultados.md](research/EXP-011-resultados.md). Primera variable nueva con aporte fuera de muestra: el poder militar en el ejecutivo mejora el AUC (M2 cumplida, IC que excluye 0); el Brier mejora sin significación (M1 no cumplida). Nuevo mejor modelo (MXm_c), pendiente de confirmar en años nuevos porque 1990–2025 ya se había usado.
