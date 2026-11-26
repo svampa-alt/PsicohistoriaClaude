@@ -1,0 +1,489 @@
+{
+  "experimento": "EXP-012",
+  "preregistro": "research/EXP-012-preregistro.md",
+  "fuente": "Archigos via AuthoritarianismBook@51716224a08674b956a6434b0d18cd761311efde",
+  "sha256_archigos_rda": "a50d68f86e463e308041544813780ec5b63bf6c9d1ecbdaafceee075ee01729f",
+  "sha256_base": "a36685a6fa11ae6ec3e6bfe71e120b8bbbfe74dce94130407b49450c96d991bf",
+  "sha256_panel": "54bbb5bbf1b46b587e9b5a2141185629631fe42051b11865051b6e87107f9df5",
+  "familia": [
+    "Popular Protest",
+    "Removed by Rebels"
+  ],
+  "gw_a_cow": {
+    "340": 345,
+    "678": 679,
+    "260": 255
+  },
+  "filas_panel": 7521,
+  "anios_pais_con_evento": 46,
+  "episodios_desde_1960": 57,
+  "episodios_en_panel": 47,
+  "por_periodo": {
+    "1960-1989": {
+      "filas": 3689,
+      "eventos": 18
+    },
+    "1990-2014": {
+      "filas": 3832,
+      "eventos": 28
+    }
+  },
+  "episodios": [
+    {
+      "anio": 1960,
+      "pais": "Korea, Republic of",
+      "gobernante": "Rhee",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1960-04-27",
+      "en_panel": true
+    },
+    {
+      "anio": 1963,
+      "pais": "Congo",
+      "gobernante": "Youlou",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1963-08-15",
+      "en_panel": true
+    },
+    {
+      "anio": 1964,
+      "pais": "Sudan",
+      "gobernante": "Abboud",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1964-11-01",
+      "en_panel": true
+    },
+    {
+      "anio": 1964,
+      "pais": "Zanzibar",
+      "gobernante": "Shamte Hamadi",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1964-01-12",
+      "en_panel": false
+    },
+    {
+      "anio": 1964,
+      "pais": "Vietnam, Republic of",
+      "gobernante": "Khanh",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1964-11-04",
+      "en_panel": false
+    },
+    {
+      "anio": 1966,
+      "pais": "Ecuador",
+      "gobernante": "Castro",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1966-03-29",
+      "en_panel": true
+    },
+    {
+      "anio": 1969,
+      "pais": "Pakistan",
+      "gobernante": "Ayub Khan",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1969-03-25",
+      "en_panel": false
+    },
+    {
+      "anio": 1970,
+      "pais": "Poland",
+      "gobernante": "Gomulka",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1970-12-20",
+      "en_panel": true
+    },
+    {
+      "anio": 1972,
+      "pais": "Madagascar (Malagasy)",
+      "gobernante": "Tsiranana",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1972-10-08",
+      "en_panel": true
+    },
+    {
+      "anio": 1973,
+      "pais": "Thailand",
+      "gobernante": "Thanon Kittakachorn",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1973-10-13",
+      "en_panel": true
+    },
+    {
+      "anio": 1975,
+      "pais": "Laos",
+      "gobernante": "Souvanna Phouma",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "1975-12-02",
+      "en_panel": true
+    },
+    {
+      "anio": 1975,
+      "pais": "Cambodia (Kampuchea)",
+      "gobernante": "Lon Nol",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1975-04-10",
+      "en_panel": true
+    },
+    {
+      "anio": 1975,
+      "pais": "Comoros",
+      "gobernante": "Abdallah",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1975-08-03",
+      "en_panel": true
+    },
+    {
+      "anio": 1978,
+      "pais": "Yemen, People's Republic of",
+      "gobernante": "Ali Rubayyi",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "1978-06-26",
+      "en_panel": false
+    },
+    {
+      "anio": 1979,
+      "pais": "Nicaragua",
+      "gobernante": "Anastasio Somoza Debayle",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "1979-07-17",
+      "en_panel": true
+    },
+    {
+      "anio": 1979,
+      "pais": "Chad",
+      "gobernante": "Malloum",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "1979-03-23",
+      "en_panel": true
+    },
+    {
+      "anio": 1979,
+      "pais": "Iran (Persia)",
+      "gobernante": "Mohammad Reza",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1979-01-16",
+      "en_panel": true
+    },
+    {
+      "anio": 1982,
+      "pais": "Chad",
+      "gobernante": "Oueddei",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1982-06-07",
+      "en_panel": true
+    },
+    {
+      "anio": 1986,
+      "pais": "Philippines",
+      "gobernante": "Marcos",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1986-02-25",
+      "en_panel": true
+    },
+    {
+      "anio": 1986,
+      "pais": "Uganda",
+      "gobernante": "Okello",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1986-01-29",
+      "en_panel": true
+    },
+    {
+      "anio": 1989,
+      "pais": "Rumania",
+      "gobernante": "Ceausescu",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1989-12-25",
+      "en_panel": true
+    },
+    {
+      "anio": 1989,
+      "pais": "Lebanon",
+      "gobernante": "Moawad",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1989-11-22",
+      "en_panel": true
+    },
+    {
+      "anio": 1990,
+      "pais": "Bangladesh",
+      "gobernante": "Ershad",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1990-12-06",
+      "en_panel": true
+    },
+    {
+      "anio": 1990,
+      "pais": "Chad",
+      "gobernante": "Habre",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1990-12-02",
+      "en_panel": true
+    },
+    {
+      "anio": 1990,
+      "pais": "Haiti",
+      "gobernante": "Avril",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1990-03-10",
+      "en_panel": true
+    },
+    {
+      "anio": 1990,
+      "pais": "Liberia",
+      "gobernante": "Doe",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1990-09-09",
+      "en_panel": true
+    },
+    {
+      "anio": 1991,
+      "pais": "Somalia",
+      "gobernante": "Siad Barre",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1991-01-26",
+      "en_panel": false
+    },
+    {
+      "anio": 1991,
+      "pais": "Ethiopia",
+      "gobernante": "Gebre Kidan",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1991-05-27",
+      "en_panel": true
+    },
+    {
+      "anio": 1991,
+      "pais": "Ethiopia",
+      "gobernante": "Mengistu Marriam",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1991-05-21",
+      "en_panel": true
+    },
+    {
+      "anio": 1992,
+      "pais": "Azerbaijan",
+      "gobernante": "Mutalibov",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "1992-05-18",
+      "en_panel": true
+    },
+    {
+      "anio": 1992,
+      "pais": "Georgia",
+      "gobernante": "Gamsakhurdia",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1992-01-06",
+      "en_panel": true
+    },
+    {
+      "anio": 1992,
+      "pais": "Algeria",
+      "gobernante": "Boudiaf",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1992-06-29",
+      "en_panel": true
+    },
+    {
+      "anio": 1992,
+      "pais": "Tajikistan",
+      "gobernante": "Nabiyev",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1992-09-07",
+      "en_panel": true
+    },
+    {
+      "anio": 1992,
+      "pais": "Afghanistan",
+      "gobernante": "Najibullah",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1992-04-16",
+      "en_panel": false
+    },
+    {
+      "anio": 1993,
+      "pais": "Azerbaijan",
+      "gobernante": "Abulfaz Elchibey",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1993-06-18",
+      "en_panel": true
+    },
+    {
+      "anio": 1996,
+      "pais": "Afghanistan",
+      "gobernante": "Burhanuddin Rabbani",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1996-09-27",
+      "en_panel": false
+    },
+    {
+      "anio": 1997,
+      "pais": "Congo",
+      "gobernante": "Lissouba",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "1997-10-15",
+      "en_panel": true
+    },
+    {
+      "anio": 1997,
+      "pais": "Congo, Democratic Republic of (Zaire)",
+      "gobernante": "Mobutu",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "1997-05-16",
+      "en_panel": true
+    },
+    {
+      "anio": 2000,
+      "pais": "Fiji",
+      "gobernante": "Chaudhry",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "2000-05-19",
+      "en_panel": false
+    },
+    {
+      "anio": 2000,
+      "pais": "Cote D’Ivoire",
+      "gobernante": "Guei",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2000-10-25",
+      "en_panel": true
+    },
+    {
+      "anio": 2000,
+      "pais": "Ecuador",
+      "gobernante": "Mahuad",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2000-01-21",
+      "en_panel": true
+    },
+    {
+      "anio": 2000,
+      "pais": "Solomon Islands",
+      "gobernante": "Ulufa'alu",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "2000-06-05",
+      "en_panel": false
+    },
+    {
+      "anio": 2001,
+      "pais": "Afghanistan",
+      "gobernante": "Mullah Omar",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "2001-11-13",
+      "en_panel": true
+    },
+    {
+      "anio": 2003,
+      "pais": "Central African Republic",
+      "gobernante": "Patasse",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "2003-03-15",
+      "en_panel": true
+    },
+    {
+      "anio": 2003,
+      "pais": "Georgia",
+      "gobernante": "Shevardnadze",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2003-11-23",
+      "en_panel": true
+    },
+    {
+      "anio": 2004,
+      "pais": "Haiti",
+      "gobernante": "Aristide",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "2004-02-29",
+      "en_panel": true
+    },
+    {
+      "anio": 2004,
+      "pais": "Kyrgyz Republic",
+      "gobernante": "Akayev",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2004-03-25",
+      "en_panel": true
+    },
+    {
+      "anio": 2006,
+      "pais": "Nepal",
+      "gobernante": "Gyanendra",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2006-04-30",
+      "en_panel": true
+    },
+    {
+      "anio": 2006,
+      "pais": "Solomon Islands",
+      "gobernante": "Rini",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2006-05-04",
+      "en_panel": false
+    },
+    {
+      "anio": 2007,
+      "pais": "Bangladesh",
+      "gobernante": "Iajuddin",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2007-01-12",
+      "en_panel": true
+    },
+    {
+      "anio": 2007,
+      "pais": "Georgia",
+      "gobernante": "Saakashvili",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2007-11-25",
+      "en_panel": true
+    },
+    {
+      "anio": 2010,
+      "pais": "Kyrgyz Republic",
+      "gobernante": "Bakiyev",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2010-04-07",
+      "en_panel": true
+    },
+    {
+      "anio": 2011,
+      "pais": "Tunisia",
+      "gobernante": "Zine Al-Abidine Ben Ali",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2011-01-14",
+      "en_panel": true
+    },
+    {
+      "anio": 2011,
+      "pais": "Libya",
+      "gobernante": "Qaddafi",
+      "exitcode": "Removed by Rebels, with Foreign Support",
+      "fecha": "2011-08-23",
+      "en_panel": true
+    },
+    {
+      "anio": 2011,
+      "pais": "Egypt",
+      "gobernante": "Mubarak",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2011-02-11",
+      "en_panel": true
+    },
+    {
+      "anio": 2013,
+      "pais": "Central African Republic",
+      "gobernante": "Francois Bozize",
+      "exitcode": "Removed by Rebels, without Foreign Support",
+      "fecha": "2013-03-24",
+      "en_panel": true
+    },
+    {
+      "anio": 2013,
+      "pais": "Egypt",
+      "gobernante": "Morsi",
+      "exitcode": "Popular Protest, without Foreign Support",
+      "fecha": "2013-07-03",
+      "en_panel": true
+    }
+  ]
+}
