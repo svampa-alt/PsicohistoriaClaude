@@ -1,0 +1,407 @@
+{
+  "experimento": "EXP-012",
+  "preregistro": "research/EXP-012-preregistro.md",
+  "panel": "data/exp012_panel.csv",
+  "n_prueba": 3832,
+  "eventos_prueba": 28,
+  "coeficientes_MR_estandarizados": {
+    "intercepto": -6.239541517238413,
+    "E": 0.7655764393823302,
+    "P": 0.7211597008088847,
+    "I": 0.10235987970372556,
+    "loggdp_lag": -0.48289696826071843,
+    "rev_prev10": -0.05057413659987054,
+    "mil_lag": 0.2016185190354772,
+    "mob_lag": 0.11820659773906719
+  },
+  "modelos": {
+    "B0": {
+      "brier": 0.007258397763685096,
+      "auc": 0.27592665615141954,
+      "p_media": 0.006133311894421044,
+      "ic95_vs_MHr": [
+        -6.049452424656355e-06,
+        7.5582887799574625e-06
+      ]
+    },
+    "MHr": {
+      "brier": 0.007257496468273848,
+      "auc": 0.594069212858645,
+      "p_media": 0.004892726743089701,
+      "ic95_vs_B0": [
+        -7.5582887799574625e-06,
+        6.049452424656351e-06
+      ]
+    },
+    "MHr_c": {
+      "brier": 0.007267554596861498,
+      "auc": 0.41295347003154576,
+      "p_media": 0.007361212007562329,
+      "ic95_vs_B0": [
+        -4.2656197179964425e-06,
+        2.159283784963502e-05
+      ],
+      "ic95_vs_MHr": [
+        -7.5843586845648535e-06,
+        2.740400753263371e-05
+      ]
+    },
+    "MR": {
+      "brier": 0.007227775423586463,
+      "auc": 0.7866155926092835,
+      "p_media": 0.0037677291928993697,
+      "ic95_vs_B0": [
+        -9.843714088161567e-05,
+        3.535303157454191e-05
+      ],
+      "ic95_vs_MHr": [
+        -0.00010314381771949761,
+        3.7026027597114116e-05
+      ]
+    },
+    "MR_c": {
+      "brier": 0.007312738425378554,
+      "auc": 0.7616324921135647,
+      "p_media": 0.0058535663155526736,
+      "ic95_vs_B0": [
+        -6.870135477596713e-05,
+        0.00019595406228485723
+      ],
+      "ic95_vs_MHr": [
+        -7.206857283943042e-05,
+        0.00020332988109503176
+      ]
+    }
+  },
+  "hipotesis": {
+    "R1_MRc_mejor_que_B0": {
+      "ic95": [
+        -6.870135477596713e-05,
+        0.00019595406228485723
+      ],
+      "cumplida": false
+    },
+    "R2_MRc_mejor_que_MHr": {
+      "ic95": [
+        -7.206857283943042e-05,
+        0.00020332988109503176
+      ],
+      "cumplida": false
+    },
+    "R3_AUC_MRc_ge_070": {
+      "auc": 0.7616324921135647,
+      "cumplida": true
+    }
+  },
+  "episodios_prueba": [
+    {
+      "anio": 1990,
+      "pais": "Bangladesh",
+      "p_MR_c": 0.010790335980746964,
+      "puesto": 18,
+      "de": 132,
+      "percentil": 0.8712121212121212,
+      "mob_lag": 0.8444700461,
+      "mil_lag": 0.417
+    },
+    {
+      "anio": 1990,
+      "pais": "Chad",
+      "p_MR_c": 0.013115107539708433,
+      "puesto": 11,
+      "de": 132,
+      "percentil": 0.9242424242424242,
+      "mob_lag": 0.51359447,
+      "mil_lag": 0.7
+    },
+    {
+      "anio": 1990,
+      "pais": "Haiti",
+      "p_MR_c": 0.021529396116492155,
+      "puesto": 5,
+      "de": 132,
+      "percentil": 0.9696969696969697,
+      "mob_lag": 0.8248847926,
+      "mil_lag": 0.75
+    },
+    {
+      "anio": 1990,
+      "pais": "Liberia",
+      "p_MR_c": 0.005127356815265409,
+      "puesto": 32,
+      "de": 132,
+      "percentil": 0.7651515151515151,
+      "mob_lag": 0.8564516129,
+      "mil_lag": 0.2
+    },
+    {
+      "anio": 1991,
+      "pais": "Ethiopia",
+      "p_MR_c": 0.03687582949796687,
+      "puesto": 10,
+      "de": 147,
+      "percentil": 0.9387755102040817,
+      "mob_lag": 0.6525345622,
+      "mil_lag": 0.286
+    },
+    {
+      "anio": 1992,
+      "pais": "Algeria",
+      "p_MR_c": 0.004046230128815079,
+      "puesto": 80,
+      "de": 150,
+      "percentil": 0.4733333333333334,
+      "mob_lag": 1.0,
+      "mil_lag": 0.375
+    },
+    {
+      "anio": 1992,
+      "pais": "Azerbaijan",
+      "p_MR_c": 0.0104838160813666,
+      "puesto": 39,
+      "de": 150,
+      "percentil": 0.7466666666666666,
+      "mob_lag": 1.0,
+      "mil_lag": 0.2
+    },
+    {
+      "anio": 1992,
+      "pais": "Georgia",
+      "p_MR_c": 0.07845301093106968,
+      "puesto": 4,
+      "de": 150,
+      "percentil": 0.98,
+      "mob_lag": 1.0,
+      "mil_lag": 0.4
+    },
+    {
+      "anio": 1992,
+      "pais": "Tajikistan",
+      "p_MR_c": 0.023738815611120727,
+      "puesto": 18,
+      "de": 150,
+      "percentil": 0.8866666666666667,
+      "mob_lag": 0.7059907834,
+      "mil_lag": 0.0
+    },
+    {
+      "anio": 1993,
+      "pais": "Azerbaijan",
+      "p_MR_c": 0.060203653368833335,
+      "puesto": 10,
+      "de": 151,
+      "percentil": 0.9403973509933775,
+      "mob_lag": 1.0,
+      "mil_lag": 0.3
+    },
+    {
+      "anio": 1997,
+      "pais": "Congo Kinshasa",
+      "p_MR_c": 0.02929197689304159,
+      "puesto": 6,
+      "de": 153,
+      "percentil": 0.9673202614379085,
+      "mob_lag": 0.9587557604,
+      "mil_lag": 0.25
+    },
+    {
+      "anio": 1997,
+      "pais": "Congo-Brazzaville",
+      "p_MR_c": 0.005834931210677988,
+      "puesto": 36,
+      "de": 153,
+      "percentil": 0.7712418300653595,
+      "mob_lag": 0.5110599078,
+      "mil_lag": 0.2
+    },
+    {
+      "anio": 2000,
+      "pais": "Cote D'Ivoire",
+      "p_MR_c": 0.01990258156997468,
+      "puesto": 8,
+      "de": 153,
+      "percentil": 0.954248366013072,
+      "mob_lag": 0.9412442396,
+      "mil_lag": 0.875
+    },
+    {
+      "anio": 2000,
+      "pais": "Ecuador",
+      "p_MR_c": 0.015681877067204624,
+      "puesto": 9,
+      "de": 153,
+      "percentil": 0.9477124183006536,
+      "mob_lag": 0.7629032258,
+      "mil_lag": 0.5
+    },
+    {
+      "anio": 2001,
+      "pais": "Afghanistan",
+      "p_MR_c": 0.04237648770885462,
+      "puesto": 4,
+      "de": 154,
+      "percentil": 0.9805194805194806,
+      "mob_lag": 0.8156682028,
+      "mil_lag": 0.5
+    },
+    {
+      "anio": 2003,
+      "pais": "Central African Republic",
+      "p_MR_c": 0.01767469220057396,
+      "puesto": 5,
+      "de": 154,
+      "percentil": 0.974025974025974,
+      "mob_lag": 0.68640553,
+      "mil_lag": 0.4
+    },
+    {
+      "anio": 2003,
+      "pais": "Georgia",
+      "p_MR_c": 0.0017215480406300452,
+      "puesto": 54,
+      "de": 154,
+      "percentil": 0.6558441558441559,
+      "mob_lag": 0.7516129032,
+      "mil_lag": 0.0
+    },
+    {
+      "anio": 2004,
+      "pais": "Haiti",
+      "p_MR_c": 0.009530502922682257,
+      "puesto": 11,
+      "de": 154,
+      "percentil": 0.935064935064935,
+      "mob_lag": 0.9311059908,
+      "mil_lag": 0.0
+    },
+    {
+      "anio": 2004,
+      "pais": "Kyrgyzstan",
+      "p_MR_c": 0.000646712445260848,
+      "puesto": 90,
+      "de": 154,
+      "percentil": 0.42207792207792205,
+      "mob_lag": 0.451843318,
+      "mil_lag": 0.0
+    },
+    {
+      "anio": 2006,
+      "pais": "Nepal",
+      "p_MR_c": 0.006382564305407676,
+      "puesto": 13,
+      "de": 156,
+      "percentil": 0.9230769230769231,
+      "mob_lag": 0.7677419355,
+      "mil_lag": 0.088
+    },
+    {
+      "anio": 2007,
+      "pais": "Bangladesh",
+      "p_MR_c": 0.004378018104635987,
+      "puesto": 27,
+      "de": 156,
+      "percentil": 0.8333333333333334,
+      "mob_lag": 1.0,
+      "mil_lag": 0.357
+    },
+    {
+      "anio": 2007,
+      "pais": "Georgia",
+      "p_MR_c": 0.0008685601134485051,
+      "puesto": 86,
+      "de": 156,
+      "percentil": 0.4551282051282052,
+      "mob_lag": 0.5140552995,
+      "mil_lag": 0.025
+    },
+    {
+      "anio": 2010,
+      "pais": "Kyrgyzstan",
+      "p_MR_c": 0.0019378187904161314,
+      "puesto": 88,
+      "de": 157,
+      "percentil": 0.445859872611465,
+      "mob_lag": 0.4910138249,
+      "mil_lag": 0.0
+    },
+    {
+      "anio": 2011,
+      "pais": "Egypt",
+      "p_MR_c": 0.0005841000941149787,
+      "puesto": 107,
+      "de": 158,
+      "percentil": 0.3291139240506329,
+      "mob_lag": 0.4131336406,
+      "mil_lag": 0.348
+    },
+    {
+      "anio": 2011,
+      "pais": "Libya",
+      "p_MR_c": 0.00039826541721220784,
+      "puesto": 124,
+      "de": 158,
+      "percentil": 0.2215189873417721,
+      "mob_lag": 0.6951612903,
+      "mil_lag": 0.571
+    },
+    {
+      "anio": 2011,
+      "pais": "Tunisia",
+      "p_MR_c": 0.0024236962502406207,
+      "puesto": 50,
+      "de": 158,
+      "percentil": 0.689873417721519,
+      "mob_lag": 0.6456221198,
+      "mil_lag": 0.125
+    },
+    {
+      "anio": 2013,
+      "pais": "Central African Republic",
+      "p_MR_c": 0.015209888448034557,
+      "puesto": 7,
+      "de": 157,
+      "percentil": 0.9617834394904459,
+      "mob_lag": 1.0,
+      "mil_lag": 0.5
+    },
+    {
+      "anio": 2013,
+      "pais": "Egypt",
+      "p_MR_c": 0.01053326897125215,
+      "puesto": 10,
+      "de": 157,
+      "percentil": 0.9426751592356688,
+      "mob_lag": 1.0,
+      "mil_lag": 0.5
+    }
+  ],
+  "casos_dentro_de_muestra": [
+    {
+      "caso": "Iran 1979",
+      "en_panel": true,
+      "p": 0.02300583273878943,
+      "puesto": 8,
+      "de": 130,
+      "evento": 1,
+      "nota": "ajuste dentro de muestra, no pronostico"
+    },
+    {
+      "caso": "Romania 1989",
+      "en_panel": true,
+      "p": 0.004932590574217474,
+      "puesto": 34,
+      "de": 131,
+      "evento": 1,
+      "nota": "ajuste dentro de muestra, no pronostico"
+    },
+    {
+      "caso": "Philippines 1986",
+      "en_panel": true,
+      "p": 0.01899995309955004,
+      "puesto": 6,
+      "de": 131,
+      "evento": 1,
+      "nota": "ajuste dentro de muestra, no pronostico"
+    }
+  ]
+}

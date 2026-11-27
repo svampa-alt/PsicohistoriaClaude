@@ -126,3 +126,7 @@ Evidencia: [research/EXP-011-resultados.md](research/EXP-011-resultados.md). Pri
 ### Actualización 2026-11-26 (EXP-012, episodios)
 
 Evidencia: [research/EXP-012-panel-caidas.md](research/EXP-012-panel-caidas.md). Nueva familia de eventos con episodios individuales verificables (Archigos): 47 caídas de gobernantes por protesta o rebelión en el panel, entre ellas la revolución iraní de 1979, caso prioritario de la hoja de ruta. Episodios históricos acumulados: 50 (meta de mediano plazo: ≥30, **alcanzada en número**; los controles son los demás países-año). La caída del Muro de Berlín sigue sin cubrirse: la RDA no tiene datos de PIB en el panel. Evaluación preregistrada, no ejecutada.
+
+### Actualización 2026-11-27 (EXP-012, resultados)
+
+Evidencia: [research/EXP-012-resultados.md](research/EXP-012-resultados.md). Para caídas por protesta o rebelión (28 eventos en 1990–2014) el modelo ordena el riesgo (AUC 0,762) pero no supera a la tasa histórica ni a las caídas previas en Brier. Falla en la Primavera Árabe y en las revoluciones de colores. Irán 1979, caso prioritario, aparece en el puesto 8 de 130, pero dentro de muestra.
